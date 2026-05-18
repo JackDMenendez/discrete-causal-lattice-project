@@ -1,42 +1,58 @@
 ---
 name: Image / figure request
-about: Request a new image or figure, or an enhancement to an existing one
+about: Request a new figure, or an enhancement to an existing one
 labels: enhancement, image
 ---
 
 ## Image / figure request
 
-**Linked repository name**
-Name the repository this change belongs to, even if it does not exist yet.
+**Affected repository** (check one)
 
-**Repository status**
-- existing
-- planned
-- proposed
-
-**Repository URL (if existing)**
-Provide the repository URL if it already exists.
+- [ ] `dcl` -- Paper I
+- [ ] `dcl-sm-derivation` -- Paper II
+- [ ] `dcl-generator-zoo`
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III
+- [ ] `dcl-core`
+- [ ] this meta / project repo
+- [ ] other: _______________________
 
 **Figure purpose**
-Describe the purpose of the image or figure.
+
+What the figure is supposed to show.
 
 **Target location**
-Describe where it will be used (paper section, README, presentation, appendix, etc.).
+
+- [ ] paper section / appendix (which?)
+- [ ] README
+- [ ] presentation
+- [ ] notes / documentation
+- [ ] other:
 
 **Source data / inputs**
-Describe the data, model output, or source material used to create it.
+
+Data, model output, or source material (e.g. `data/exp_NN.npy`,
+a sympy expression, a hand-drawn sketch).
 
 **Style / dimensions**
-Describe styling, dimensions, layout, color constraints, or formatting needs.
+
+Styling, dimensions, layout, colour constraints (e.g. paper-figure
+size, screen-readable, print-friendly), or formatting needs.
 
 **Output format**
-List the desired output format(s), such as PNG, SVG, PDF, etc.
+
+- [ ] PNG (raster, for slides / web)
+- [ ] PDF (vector, for paper)
+- [ ] SVG (vector, for web / editable)
+- [ ] other:
 
 **Dependencies / related issues**
-List any dependencies or related issues.
+
+List dependencies and related issues.
 
 **Success criteria**
+
 Describe what success looks like.
 
 **Additional context**
-Add any other context here.
+
+Any other context.

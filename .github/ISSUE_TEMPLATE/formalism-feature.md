@@ -1,42 +1,77 @@
 ---
-name: Formalism request
-about: Propose a new formalism or an enhancement to an existing formalism
+name: Formalism feature
+about: Propose a new formalism, definition, or proof; or a dcl-formalism module
 labels: enhancement, formalism
 ---
 
-## Formalism request
+## Formalism feature
 
-**Linked repository name**
-Name the repository this change belongs to, even if it does not exist yet.
+**Affected repository** (check one or more)
 
-**Repository status**
-- existing
-- planned
-- proposed
+- [ ] `dcl-formalism` -- sympy-extending package (planned)
+- [ ] `physics-research/Notes/` -- formalisation notes (external)
+- [ ] one of the paper repos -- formalism flows into a paper section
+- [ ] other (proposed): _______________________
 
-**Repository URL (if existing)**
-Provide the repository URL if it already exists.
+**Repository status** (check one)
 
-**Concept to formalize**
-Describe the concept, structure, or idea that needs formal treatment.
+- [ ] existing
+- [ ] planned (scoped; repo to be created)
+- [ ] proposed (idea-stage only)
+
+**Concept to formalise**
+
+The concept, structure, or idea needing formal treatment.
 
 **Definitions needed**
-List the required definitions, notation, or primitives.
+
+Required definitions, notation, or primitives.  If extending
+sympy, name the existing sympy class(es) you plan to subclass
+(e.g. `sympy.Symbol`, `sympy.Function`, `sympy.physics.quantum.Operator`).
+
+**sympy-extension hint** (if applicable)
+
+- [ ] new `Symbol` / `Function` / `Operator` subclass
+- [ ] new `Basic` subclass with custom `_eval_*` overrides
+- [ ] new module under `dcl_formalism/<area>/`
+- [ ] sympy module being extended:
+- Proposed public-API name (`dcl_formalism.<X>`):
 
 **Assumptions**
-Describe the assumptions or constraints.
+
+Assumptions or constraints under which the formalism holds.
 
 **Target result**
-Describe the theorem, proposition, lemma, or formal result desired.
+
+The theorem, proposition, lemma, identity, or formal result
+desired.  State it crisply if you can; otherwise describe what
+the result *would* look like.
 
 **Relation to existing formalism**
-Explain how this connects to current definitions, proofs, or structures.
+
+How this connects to existing definitions, proofs, or structures.
+Cite Paper~I / Paper~II sections, the
+`external/dcl/notes/follow_on_implications.md` catalogue entries
+(\#13 Operation Algebra, \#14 Balanced Equations are the obvious
+parents), and any `physics-research/Notes/` material.
+
+**Verification path**
+
+How will the formal result be checked?
+
+- [ ] sympy symbolic verification (test in `dcl-formalism/tests/`)
+- [ ] paper-text proof
+- [ ] numerical cross-check against `dcl-core` execution
+- [ ] structural argument only
 
 **Dependencies / related issues**
-List any dependencies or related issues.
+
+List dependencies and related issues.
 
 **Success criteria**
+
 Describe what success looks like.
 
 **Additional context**
-Add any other context here.
+
+Any other context.

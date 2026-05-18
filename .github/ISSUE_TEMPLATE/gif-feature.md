@@ -1,42 +1,58 @@
 ---
 name: GIF / animation request
-about: Request a new GIF or animation, or an enhancement to an existing one
+about: Request a new animation, or an enhancement to an existing one
 labels: enhancement, gif
 ---
 
 ## GIF / animation request
 
-**Linked repository name**
-Name the repository this change belongs to, even if it does not exist yet.
+**Affected repository** (check one)
 
-**Repository status**
-- existing
-- planned
-- proposed
-
-**Repository URL (if existing)**
-Provide the repository URL if it already exists.
+- [ ] `dcl` -- Paper I
+- [ ] `dcl-sm-derivation` -- Paper II
+- [ ] `dcl-generator-zoo`
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III
+- [ ] `dcl-core`
+- [ ] this meta / project repo
+- [ ] other: _______________________
 
 **Animation purpose**
-Describe the purpose of the animation.
+
+What the animation is supposed to show.
 
 **Target location**
-Describe where it will be used (paper, documentation, presentation, social post, etc.).
+
+- [ ] paper (figure / appendix)
+- [ ] README
+- [ ] presentation / talk
+- [ ] social post
+- [ ] documentation
+- [ ] other:
 
 **Source frames / data**
-Describe the inputs, source frames, or data used to produce the animation.
+
+Inputs, source frames, or data used to produce the animation
+(e.g. `data/exp_NN.npy`, `data/exp_NN_trajectory.npy`).
 
 **Duration / FPS**
-Describe the desired duration and frame rate.
+
+Desired duration and frame rate.
 
 **Output format**
-List the desired output format(s), such as GIF, MP4, or WebM.
+
+- [ ] GIF (small / shareable)
+- [ ] MP4 (presentation-quality)
+- [ ] WebM
+- [ ] other:
 
 **Dependencies / related issues**
-List any dependencies or related issues.
+
+List dependencies and related issues.
 
 **Success criteria**
+
 Describe what success looks like.
 
 **Additional context**
-Add any other context here.
+
+Any other context.

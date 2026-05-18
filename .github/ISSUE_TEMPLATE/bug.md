@@ -1,35 +1,71 @@
 ---
-name: Bug report for Experiment or Utility
+name: Bug report (experiment or utility)
 about: Report a bug in an experiment or utility workflow
 labels: bug
 ---
 
-## Bug report for experiment or utility
+## Bug report
+
+**Affected repository** (check one or more)
+
+- [ ] `dcl` -- Paper I (*Geometry First*, doi:10.5281/zenodo.20078529)
+- [ ] `dcl-sm-derivation` -- Paper II (*Geometry Forces Physics*, doi:10.5281/zenodo.20240736)
+- [ ] `dcl-generator-zoo` -- 71-dim per-site automorphism catalogue
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III (quantum Roche limit), v0.1
+- [ ] `dcl-core` -- Python engine (v0.1.0-dev)
+- [ ] `dcl-formalism` -- sympy-extending formalism package (planned)
+- [ ] `discrete-causal-lattice-project` -- this meta / project repo
+- [ ] `physics-research` -- formalisation notes (external)
+- [ ] other: _______________________
+
+**Repository version**
+
+- Repo: ``
+- Commit / tag: ``
+- Date observed: ``
+
+**Experiment ID** (if applicable)
+
+`exp_NN_<name>` from `src/experiments/`.
 
 **Describe the bug**
-A clear and concise description of what the bug is.
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Initial parameters
-2. Experiment ID
+Clear and concise description of what the bug is.
 
-**Data Produced**
-- .npy files
-- figures
-- pdf
-- LaTeX
+**To reproduce**
 
-**Logs**
-Please supply text output.
+Steps to reproduce:
 
-**Screenshots (if applicable)**
-If applicable, add screenshots to help explain your problem.
+1. Initial parameters (`OMEGA_E`, `STRENGTH`, `GRID`, etc.):
+2. Experiment / utility invoked:
+3. ...
 
-**Environment (please complete the following information):**
-- OS: [e.g., macOS, Windows, Linux]
-- Browser: [e.g. Chrome, Firefox]
-- Project version: [e.g. 1.0]
+**Data produced** (attach or paste)
+
+- [ ] `.npy` files
+- [ ] figures
+- [ ] PDF
+- [ ] LaTeX output
+- [ ] stdout logs
+
+**Logs / stdout / stack trace**
+
+```text
+(paste here)
+```
+
+**Audit-table impact** (if applicable)
+
+- Affected row(s) in `paper/sections/audit_table.tex`:
+- Status change: `<old>` -> `<new>` (`PASS` / `PART` / `STUB` / `FAIL`)
+- [ ] **Regression flag**: this changes a previously-`PASS` row to `FAIL` (treat as critical)
+
+**Environment**
+
+- OS: [Windows / macOS / Linux]
+- Python: [e.g. 3.12.4]
+- Shell / build tool: [e.g. MSYS2 UCRT64, latexmk]
 
 **Additional context**
-Add any other context about the problem here.
+
+Any other context, screenshots, or prior-art issues to link.

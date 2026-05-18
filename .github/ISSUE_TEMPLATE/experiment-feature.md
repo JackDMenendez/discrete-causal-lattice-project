@@ -1,45 +1,84 @@
 ---
 name: Experiment feature
-about: Propose a new experiment or an enhancement to an experiment workflow
+about: Propose a new experiment or enhance an experiment workflow
 labels: enhancement, experiment
 ---
 
 ## Experiment feature
 
-**Linked repository name**
-Name the repository this change belongs to, even if it does not exist yet.
+**Affected repository** (check one or more)
 
-**Repository status**
-- existing
-- planned
-- proposed
+- [ ] `dcl` -- Paper I
+- [ ] `dcl-sm-derivation` -- Paper II
+- [ ] `dcl-generator-zoo`
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III
+- [ ] `dcl-core`
+- [ ] other (planned / proposed): _______________________
 
-**Repository URL (if existing)**
-Provide the repository URL if it already exists.
+**Repository status** (check one)
+
+- [ ] existing
+- [ ] planned (scoped; repo to be created)
+- [ ] proposed (idea-stage only)
+
+**Experiment ID**
+
+`exp_NN_<name>` (existing) or `exp_NN_<proposed_name>` (new).
+Check `src/experiments/EXPERIMENTS.md` for the next free `NN`.
 
 **Experiment goal**
-Describe the goal, hypothesis, or research question.
+
+Goal, hypothesis, or research question.  One paragraph.
 
 **Motivation**
-Explain why this experiment is needed.
+
+Why this experiment is needed.  Cite the audit-table row or
+follow-on catalogue entry (`external/dcl/notes/follow_on_implications.md`)
+this experiment serves.
 
 **Inputs / parameters**
-Describe the expected inputs, parameter ranges, or configuration.
+
+Expected inputs, parameter ranges, or configuration.  Use the
+Paper~I convention: `OMEGA_E`, `OMEGA_P`, `STRENGTH`, `GRID`, etc.
 
 **Expected outputs**
-Describe the expected outputs, artifacts, or generated data.
+
+- [ ] `.npy` arrays under `data/`
+- [ ] stdout log under `data/<exp_id>*.log`
+- [ ] figures under `paper/figures/` or `figures/`
+- [ ] new audit-table row in `paper/sections/audit_table.tex`
 
 **Metrics / evaluation**
-List the metrics or evaluation criteria.
+
+How will the result be evaluated?  PASS / PART / FAIL criteria
+specific to this experiment.
+
+**Audit-table impact** (if applicable)
+
+- New row?  ` [ ] yes  /  [ ] no`
+- Existing row affected:
+- Expected status at first run: `[ ] PASS  [ ] PART  [ ] STUB  [ ] FAIL`
+
+**Resource estimate**
+
+- Wall-clock per run: [e.g. 30 s, 2 hr, 24 hr]
+- Hardware: [CPU only / GPU required / specific lattice grid size]
+- Determinism: [seeded / non-deterministic]
 
 **Reproducibility notes**
-Describe any reproducibility requirements or constraints.
+
+Anything reviewers will need to know to reproduce this
+experiment from a fresh clone of the tagged release.
 
 **Dependencies / related issues**
-List any dependencies or related issues.
+
+List dependencies, related issues, or upstream notes.
 
 **Success criteria**
-Describe what success looks like.
+
+Concrete, falsifiable.  What does the experiment have to produce
+for the audit row to flip to its target status?
 
 **Additional context**
-Add any other context here.
+
+Any other context.

@@ -1,45 +1,66 @@
 ---
 name: Utility feature
-about: Propose a new utility or enhancement to an existing utility
+about: Propose a new utility script or enhancement to an existing utility
 labels: enhancement, utility
 ---
 
 ## Utility feature
 
-**Linked repository name**
-Name the repository this change belongs to, even if it does not exist yet.
+**Affected repository** (check one or more)
 
-**Repository status**
-- existing
-- planned
-- proposed
+- [ ] `dcl` -- Paper I
+- [ ] `dcl-sm-derivation` -- Paper II
+- [ ] `dcl-generator-zoo`
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III
+- [ ] `dcl-core`
+- [ ] `dcl-formalism` (planned)
+- [ ] other: _______________________
 
-**Repository URL (if existing)**
-Provide the repository URL if it already exists.
+**Repository status** (check one)
+
+- [ ] existing
+- [ ] planned (scoped; repo to be created)
+- [ ] proposed (idea-stage only)
 
 **User need**
-Describe the problem this utility should solve.
+
+The problem this utility should solve.
 
 **Proposed utility**
-Describe the utility, tool, command, or helper being requested.
 
-**Interface**
-Describe the expected interface (CLI, API, script, notebook, etc.).
+Description of the utility, tool, command, or helper requested.
+Suggested path within the repo: `src/utilities/<topic>.py`.
+
+**Interface** (check one)
+
+- [ ] CLI (invoked from a shell)
+- [ ] Python API (imported in scripts / notebooks)
+- [ ] Make target (in the project's `makefile` chain)
+- [ ] notebook / interactive
+- [ ] other:
 
 **Inputs / outputs**
-Describe the expected inputs and outputs.
+
+Expected inputs (config, `.npy`, sympy expressions, ...) and
+expected outputs (figures, JSON catalogues, LaTeX fragments, ...).
 
 **Workflow impact**
-Explain how this changes or improves the workflow.
+
+How this changes or improves the existing workflow.  Cite the
+audit-table row or experiment that consumes it.
 
 **Edge cases / constraints**
-List any edge cases, constraints, or failure modes.
+
+Edge cases, constraints, or failure modes.
 
 **Dependencies / related issues**
-List any dependencies or related issues.
+
+List dependencies and related issues.
 
 **Success criteria**
-Describe what success looks like.
+
+What success looks like.
 
 **Additional context**
-Add any other context here.
+
+Any other context.

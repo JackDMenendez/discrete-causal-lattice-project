@@ -1,43 +1,72 @@
 ---
 name: LaTeX formatting issue
 about: Report a LaTeX rendering or formatting problem
-labels: bug
+labels: bug, latex
 ---
 
 ## LaTeX formatting issue
 
+**Affected paper repository** (check one)
+
+- [ ] `dcl` -- Paper I
+- [ ] `dcl-sm-derivation` -- Paper II
+- [ ] `dcl-generator-zoo` (catalogue paper)
+- [ ] `dcl-paper-03-tidal-ionization` -- Paper III
+- [ ] other: _______________________
+
+**Affected file / section**
+
+e.g. `paper/main.tex`, `paper/sections/audit_table.tex`,
+`paper/macros/packages.tex`, line ranges if known.
+
 **Describe the formatting problem**
-A clear and concise description of the rendering or formatting issue.
+
+Clear, concise description of the rendering or formatting issue.
 
 **Expected rendering**
-Describe what you expected the output to look like.
+
+What you expected the output to look like.
 
 **Actual rendering**
-Describe what actually appeared in the output.
+
+What actually appeared in the output.
 
 **Minimal example**
-Provide the smallest example that reproduces the problem.
 
-**Generated `.tex` snippet**
-Include the relevant LaTeX snippet if available.
+Smallest example that reproduces the problem.
+
+```latex
+% paste here
+```
 
 **Output affected**
-- PDF
-- figures
-- tables
-- appendix
-- other: ...
+
+- [ ] PDF body
+- [ ] figures
+- [ ] tables (`longtable`, audit table, etc.)
+- [ ] appendix
+- [ ] title page / `\thanks{}` block
+- [ ] bibliography
+- [ ] other:
 
 **Compiler / toolchain**
-- LaTeX engine: [e.g. pdflatex, xelatex, lualatex]
-- Build tool: [e.g. latexmk, custom script]
-- Project version: [e.g. 1.0]
+
+- LaTeX engine: pdflatex (project default; use `xelatex` / `lualatex`
+  only if explicitly switched)
+- Build tool: `build.cmd paper` / `./build.sh paper` (the framework
+  default chain) -- or another command:
+- Project version: tag or commit hash
 
 **Logs / warnings**
-Paste relevant warnings or error output.
 
-**Screenshots (if applicable)**
-Add screenshots of the formatting issue if helpful.
+```text
+(paste relevant warnings or errors)
+```
+
+**Screenshots (if helpful)**
+
+Add screenshots of the formatting issue.
 
 **Additional context**
-Add any other context about the problem here.
+
+Any other context.
