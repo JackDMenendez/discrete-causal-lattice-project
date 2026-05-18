@@ -6,6 +6,8 @@ labels: enhancement, gif
 
 ## GIF / animation request
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 **Affected repository** (check one)
 
 - [ ] `dcl` -- Paper I
@@ -20,7 +22,7 @@ labels: enhancement, gif
 
 What the animation is supposed to show.
 
-**Target location**
+**Target location** (check any that apply)
 
 - [ ] paper (figure / appendix)
 - [ ] README
@@ -28,6 +30,12 @@ What the animation is supposed to show.
 - [ ] social post
 - [ ] documentation
 - [ ] other:
+
+If the animation is a **standalone research object**
+(interactive / explorable / hosted in its own right), use the
+[Research artifact](./research-artifact.md) template instead.
+This template is for non-interactive animated artifacts bound to
+a paper / README / slide.
 
 **Source frames / data**
 
@@ -38,11 +46,13 @@ Inputs, source frames, or data used to produce the animation
 
 Desired duration and frame rate.
 
-**Output format**
+**Output format** (check one or more)
 
 - [ ] GIF (small / shareable)
 - [ ] MP4 (presentation-quality)
 - [ ] WebM
+- [ ] interactive (3D / WebGL / explorable) -- *use the
+      Research artifact template instead*
 - [ ] other:
 
 **Dependencies / related issues**

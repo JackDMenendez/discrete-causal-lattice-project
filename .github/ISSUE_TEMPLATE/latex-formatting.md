@@ -6,6 +6,8 @@ labels: bug, latex
 
 ## LaTeX formatting issue
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 **Affected paper repository** (check one)
 
 - [ ] `dcl` -- Paper I

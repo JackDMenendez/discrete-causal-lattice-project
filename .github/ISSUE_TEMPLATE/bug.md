@@ -6,6 +6,8 @@ labels: bug
 
 ## Bug report
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 **Affected repository** (check one or more)
 
 - [ ] `dcl` -- Paper I (*Geometry First*, doi:10.5281/zenodo.20078529)

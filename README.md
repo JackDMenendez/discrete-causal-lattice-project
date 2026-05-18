@@ -33,7 +33,16 @@ the project board at
 ## Issue templates
 
 The templates under `.github/ISSUE_TEMPLATE/` are trial balloons.
-They share a common shape:
+
+**How checkboxes work in the templates.**  `- [ ]` (with the
+space between the brackets) is an unchecked box; `- [x]` is
+checked.  When the issue is rendered on GitHub you can just click
+the box to toggle and GitHub updates the markdown for you.  When
+editing the issue body directly (no rendered view), hand-edit
+`[ ]` -> `[x]` to check.  Each template starts with a one-line
+reminder containing a copyable `[x]` for that purpose.
+
+The templates share a common shape:
 
 - A **repository selector** (which of the series repos this
   affects) so routing is crisp.
@@ -57,6 +66,11 @@ Each template:
 - `paper-enhancement.md` -- paper section / appendix work.
 - `release-coordination.md` -- track a release end-to-end,
   including the cross-repo bump-and-rebuild workflow.
+- `research-artifact.md` -- propose a standalone research object
+  (interactive visualisation, notebook, web demo, dataset, small
+  tool) that is *not* tied to a single paper.  Distinct from
+  `image-feature.md` / `gif-feature.md`, which are for static or
+  animated artifacts bound to a specific paper / README / slide.
 - `utility-feature.md` -- new utility script or enhancement.
 - `config.yml` -- disables the blank-issue path; links to the
   project board.

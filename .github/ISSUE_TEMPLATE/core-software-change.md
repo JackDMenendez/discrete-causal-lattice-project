@@ -6,6 +6,8 @@ labels: enhancement, core-software
 
 ## Core software change
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 This template is pre-routed to **`dcl-core`**
 (<https://github.com/JackDMenendez/dcl-core>).  For other repos use
 the relevant template (paper enhancement, experiment feature,

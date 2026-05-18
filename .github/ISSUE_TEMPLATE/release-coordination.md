@@ -6,6 +6,8 @@ labels: release
 
 ## Release coordination
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 **Repository being released** (check one)
 
 - [ ] `dcl` (rarely; immutable since v1.0)

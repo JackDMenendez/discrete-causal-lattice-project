@@ -6,6 +6,8 @@ labels: enhancement, formalism
 
 ## Formalism feature
 
+> *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
+
 **Affected repository** (check one or more)
 
 - [ ] `dcl-formalism` -- sympy-extending package (planned)
