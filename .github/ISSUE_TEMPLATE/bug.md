@@ -4,9 +4,9 @@ about: Report a bug in an experiment or utility workflow
 labels: bug
 ---
 
-## Bug report for experiment or utility 
+## Bug report for experiment or utility
 
-*Describe the bug**
+**Describe the bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
@@ -18,7 +18,7 @@ Steps to reproduce the behavior:
 - .npy files
 - figures
 - pdf
-- LaTex
+- LaTeX
 
 **Logs**
 Please supply text output.
