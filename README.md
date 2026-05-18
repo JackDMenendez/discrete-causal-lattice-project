@@ -71,7 +71,24 @@ Each template:
   tool) that is *not* tied to a single paper.  Distinct from
   `image-feature.md` / `gif-feature.md`, which are for static or
   animated artifacts bound to a specific paper / README / slide.
+- `research-investigation.md` -- capture a forward-looking
+  research thread that may span multiple experiments, papers,
+  packages, and notes -- no single deliverable yet (e.g. proton
+  internals, discrete-probability paper, Hilbert-6th
+  axiomatization).  Distinct from `paper-enhancement` (which
+  targets specific sections) and `experiment-feature` (which
+  targets a specific `exp_NN`).
 - `utility-feature.md` -- new utility script or enhancement.
+
+**A note on shape.**  The `paper-enhancement` and
+`research-investigation` templates are *planning-shaped*
+(description / objectives / requirements / tools needed /
+phased program / status) rather than bug-shaped.  Filling them
+in is a planning exercise; expect to revisit and extend the
+issue body as the work matures.  The other enhancement
+templates (experiment, utility, formalism, etc.) sit somewhere
+in between -- they target a specific thing but still surface
+multi-objective and audit-row impact.
 - `config.yml` -- disables the blank-issue path; links to the
   project board.
 
