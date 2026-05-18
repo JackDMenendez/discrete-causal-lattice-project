@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Project board
+    url: https://github.com/users/JackDMenendez/projects/6/views/1?layout_template=table
+    about: View and manage project work items on the project board.
