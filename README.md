@@ -20,6 +20,8 @@ the project board at
 
 ## Repositories tracked
 
+*Existing repos:*
+
 | Repo | Role | Latest |
 |---|---|---|
 | [`dcl`](https://github.com/JackDMenendez/dcl) | Paper I -- *Geometry First* | v1.0, doi:10.5281/zenodo.20078529 |
@@ -27,8 +29,23 @@ the project board at
 | [`dcl-generator-zoo`](https://github.com/JackDMenendez/dcl-generator-zoo) | Catalogue of the 71-dim per-site automorphism algebra | v0.1-DRAFT |
 | [`dcl-paper-03-tidal-ionization`](https://github.com/JackDMenendez/dcl-paper-03-tidal-ionization) | Paper III -- quantum Roche limit / tidal ionization | v0.1 |
 | [`dcl-core`](https://github.com/JackDMenendez/dcl-core) | Python engine (`dcl_core.core` + `dcl_core.core3d`) | v0.1.0-dev |
-| `dcl-formalism` | sympy-extending formalism package (Paper I follow-ons #13 + #14) | *planned* |
-| `physics-research` | parallel formalisation notes | *private; external* |
+
+*Planned (in the framework's forward-looking design; tracked via
+memory entries in the local Claude project memory):*
+
+| Item | Role | Status |
+|---|---|---|
+| Proton internals | Future paper -- consumes Paper II's $SU(3)$ machinery + the generator zoo | planned; memory: `project-proton-internals-downstream` |
+| Discrete-probability paper | Empirical companion to `dcl_core.core3d` v1.0; centerpiece showcase closes Paper II's open gauge-coupling prefactor | planned (post-Paper III); memory: `project-discrete-probability-paper` |
+| `dcl-formalism` | Sympy-extending formalism package + companion paper (Paper I follow-ons #13 + #14; designed to support Hilbert-6th paper #18) | planned; memory: `project-a1-formalism-package` |
+| Hilbert-6th axiomatization | Paper I follow-on #18 -- capstone tying the methodological claim together | planned; design constraints live in `project-a1-formalism-package` memory entry |
+| Other Paper I follow-ons | `external/dcl/notes/follow_on_implications.md` catalogues 18 forward-looking items | planned; consult the catalogue when proposing |
+
+*External / private:*
+
+| Repo | Role |
+|---|---|
+| `physics-research` | Parallel formalisation notes (private; external) |
 
 ## Issue templates
 
@@ -63,7 +80,15 @@ Each template:
   modules; new definitions / theorems / sympy primitives.
 - `gif-feature.md`, `image-feature.md` -- visual artifacts.
 - `latex-formatting.md` -- LaTeX rendering / formatting issues.
-- `paper-enhancement.md` -- paper section / appendix work.
+- `new-subproject.md` -- spin up a new releasable subproject:
+  paper, software package, dataset, research-artifact, or formalism
+  module.  Captures slot in the framework, deliverables, eventual
+  Zenodo deposit type, repo plan, audit-table plan, cross-repo
+  dependencies, phased program.
+- `paper-enhancement.md` -- *modify* an existing paper (new
+  section, appendix, audit row, figure, note, restructure,
+  bibliography entry).  For a *new* paper, use `new-subproject`
+  instead.
 - `release-coordination.md` -- track a release end-to-end,
   including the cross-repo bump-and-rebuild workflow.
 - `research-artifact.md` -- propose a standalone research object

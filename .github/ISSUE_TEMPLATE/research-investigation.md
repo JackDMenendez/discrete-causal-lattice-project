@@ -67,7 +67,21 @@ the gap is more interesting than the early guess at how to close it.
 
 **Expected eventual output** (one or more -- the shape may evolve)
 
-- [ ] new paper (where in the series?): _______________________
+*A new paper in the series* (check if this investigation may produce
+its own paper, then which slot):
+
+- [ ] Proton internals (memory: `project-proton-internals-downstream`)
+- [ ] Discrete-probability paper (memory:
+      `project-discrete-probability-paper`)
+- [ ] `dcl-formalism` package paper (memory:
+      `project-a1-formalism-package`)
+- [ ] Hilbert-6th axiomatization (Paper~I follow-on \#18)
+- [ ] another Paper~I follow-on (cite #__): _______________________
+- [ ] new paper not in the catalogue yet:
+      _______________________
+
+*Or a contribution to existing artefacts:*
+
 - [ ] new section in an existing paper: _______________________
 - [ ] new audit row(s) in an existing paper: _______________________
 - [ ] new `notes/<topic>.md` file(s): _______________________

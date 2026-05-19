@@ -8,21 +8,26 @@ labels: enhancement, paper
 
 > *Checkbox tip:* `[ ]` = unchecked, `[x]` = checked.  Click the box in GitHub's rendered view to toggle, or hand-edit the markdown (copy `[x]` from here to paste over any `[ ]`).
 
-This template plans a paper enhancement -- a forward-looking work
-item that may touch sections, notes, the audit table, figures,
-and the bibliography.  For a single visual artefact use
-`image-feature` / `gif-feature` / `research-artifact`; for a new
-experiment use `experiment-feature`; for an exploratory thread
-without a single deliverable use `research-investigation`; for a
-LaTeX rendering bug use `latex-formatting`.
+This template plans a *modification* to an existing paper -- a new
+section, appendix, audit row, figure, note, restructure, or
+bibliography entry.  For:
 
-**Affected paper repository** (check one or more)
+- a *new* paper, software package, dataset, or research-artefact
+  (i.e. a new releasable subproject), use `new-subproject`;
+- a single visual artefact, use `image-feature` / `gif-feature` /
+  `research-artifact`;
+- a new experiment, use `experiment-feature`;
+- an exploratory thread without a single deliverable yet, use
+  `research-investigation`;
+- a LaTeX rendering bug, use `latex-formatting`.
+
+**Affected paper** (check one or more -- existing repos only; if the
+target paper doesn't exist yet, use `new-subproject` instead)
 
 - [ ] `dcl` -- Paper I (*Geometry First*)
 - [ ] `dcl-sm-derivation` -- Paper II (*Geometry Forces Physics*)
 - [ ] `dcl-generator-zoo` (catalogue paper)
 - [ ] `dcl-paper-03-tidal-ionization` -- Paper III
-- [ ] new paper (planned / proposed): _______________________
 
 **Description**
 
