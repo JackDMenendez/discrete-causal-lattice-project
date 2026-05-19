@@ -78,7 +78,10 @@ Each template:
 - `experiment-feature.md` -- new experiment or enhancement.
 - `formalism-feature.md` -- formal work; new `dcl-formalism`
   modules; new definitions / theorems / sympy primitives.
-- `gif-feature.md`, `image-feature.md` -- visual artifacts.
+- `figure-or-animation.md` -- visual artifacts bound to a paper /
+  README / slide (static figures: PNG / PDF / SVG, or animations:
+  GIF / MP4 / WebM).  For interactive / explorable artefacts in
+  their own right, use `research-artifact.md` instead.
 - `latex-formatting.md` -- LaTeX rendering / formatting issues.
 - `new-subproject.md` -- spin up a new releasable subproject:
   paper, software package, dataset, research-artifact, or formalism
