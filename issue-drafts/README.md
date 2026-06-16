@@ -60,6 +60,7 @@ Examples:
 | 015 | [Gauge-sector birefringence (Q eigenvalues {4,4,16})](./015-formalism-feature-gauge-sector-birefringence.md) | `formalism-feature` | [#17](https://github.com/JackDMenendez/discrete-causal-lattice-project/issues/17) | filed (sub-issue of #13) |
 | 016 | [exp_03 gauge-sector birefringence companion](./016-experiment-feature-exp03-gauge-sector-companion.md) | `experiment-feature` | [#18](https://github.com/JackDMenendez/discrete-causal-lattice-project/issues/18) | filed (sub-issue of #13) |
 | 017 | [Multi-channel concordance (P9)](./017-formalism-feature-multichannel-concordance-p9.md) | `formalism-feature` | [#19](https://github.com/JackDMenendez/discrete-causal-lattice-project/issues/19) | filed (sub-issue of #13) |
+| 018 | [core3d v0.3.0 Peierls gauge field + vacuum response](./018-core-software-change-core3d-peierls-gauge-field.md) | `core-software-change` | [#20](https://github.com/JackDMenendez/discrete-causal-lattice-project/issues/20) | filed (sub-issue of #9; blocks #18) |
 
 ## Notes
 
