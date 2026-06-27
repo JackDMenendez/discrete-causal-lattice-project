@@ -6,7 +6,7 @@ repo: dcl-paper-06-Bell-test
 branch: main
 commits: []                         # advisory; the artifact is dcl-mathematics 3ed082a (referenced)
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (physics conclusions + a referenced math note; no paper-06 code shipped)
 flags:
@@ -18,8 +18,8 @@ flags:
 decisions:
   - "The single decidable question is REPRESENTATIONAL: does the lattice store a joint amplitude over PAIRS of nodes (entangled) or two fields over SINGLE nodes (mean-field/Hartree → separable → S<=2)? The two-body Bohr solver is the probe."
   - "Math backbone committed: dcl-mathematics/notes/bell_chsh_separability_on_lattice.md (3ed082a). Paper VI cites it via the audit-table evidence column."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-06-Bell-test (focused)
+consumed_at: 2026-06-27
 ---
 
 ## Summary
