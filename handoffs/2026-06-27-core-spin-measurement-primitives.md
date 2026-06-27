@@ -6,7 +6,7 @@ repo: dcl-paper-06-Bell-test
 branch: main
 commits: []                         # requirements request; nothing shipped yet
 pr: none
-status: open
+status: consumed
 state: blocked
 semver: dcl_core core line, next MINOR (maintainer's call) — additive primitives, unreleased
 flags:
@@ -19,9 +19,18 @@ decisions:
   - "Mechanism confirmed by author: discrete joint-collapse (measuring A repartitions the shared floored budget to B)."
   - "Primitives go in dcl_core.core (author's call), NOT hand-rolled in the experiment; author/maintainer implements, focused session specifies."
   - "Focused session is front-loading the CHSH harness + Bell-state validation + experiment skeleton against this interface while the primitives are built."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-06-27
 ---
+
+> **PM consume note (2026-06-27):** board issue
+> [#21](https://github.com/JackDMenendez/discrete-causal-lattice-project/issues/21)
+> opened (prefix 019, "Core Software core spin-measurement primitives (Bell test, Paper VI)")
+> and added to project 6. Durable facts recorded in the dcl-website memory
+> (`bell-test-investigation`): qubit = spinor (R,L), discrete-joint-collapse
+> mechanism, P1–P4, the `apply_phase_map` flag, and the gate (Paper 06 RUN
+> blocked until primitives land). Core implementation / tests / release remain
+> open and are tracked by issue #21, not by this handoff.
 
 ## Summary
 Paper 06 (Bell/CHSH) needs four additive spin-measurement primitives in
