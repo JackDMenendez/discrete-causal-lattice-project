@@ -8,9 +8,9 @@ commits: []                         # requirements request; nothing shipped yet
 pr: none
 status: open
 state: blocked
-semver: dcl_core next MINOR (maintainer's call) — additive primitives, unreleased
+semver: dcl_core core line, next MINOR (maintainer's call) — additive primitives, unreleased
 flags:
-  - "Version: v0.3.0 appears ALREADY in-flight in dcl-core (feat/v0.3.0-peierls-phase1, gauge/Peierls work per the 2026-06-19 handoffs). These measurement primitives are a SEPARATE additive set — likely 0.4.0, or bundle into 0.3.0 if not yet released. Maintainer decides; do not assume 0.3.0."
+  - "Version: dcl_core v0.3.0 changes core3d ONLY (confirmed by author), so these core measurement primitives are an INDEPENDENT additive change on the core line. Version is the maintainer's call; not blocked by the in-flight v0.3.0/core3d work."
   - "apply_phase_map is NOT a valid Bell measurement (global U(1); leaves the Z-Bloch projection invariant). An implementer must NOT wire measurement to it."
   - "Mechanism is a hypothesis under test: CHSH>2 is expected to require prob_floor>0 and vanish in the continuum. If the joint+floor primitive still yields S<=2, the paper headline flips (primitive still correct/useful; physics claim changes)."
   - "core is a released, legacy-bearing package: primitives MUST be additive-only (no existing signature/default/numeric change; the 26 tests/core xfails must not change count)."
