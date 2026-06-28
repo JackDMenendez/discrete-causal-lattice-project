@@ -10,7 +10,7 @@ status: open
 state: complete
 semver: n/a (notes only; no software change)
 flags:
-  - "SERIALIZATION: dcl-mathematics local main is ahead of origin and has an uncommitted edit. State: commit 3ed082a (the Bell note) is committed but NOT pushed (ahead 1); notes/dcl_mathematics_scope_and_outline.md has a one-line roster edit left UNCOMMITTED on purpose for the PM to commit. Before committing/pushing, confirm no parallel session is mid-edit in dcl-mathematics (cross-repo serialization)."
+  - "SERIALIZATION (updated 2026-06-28): dcl-mathematics local main is ahead 1 (commit 3ed082a, the Bell note, committed-unpushed) and has TWO uncommitted NOTE files for the PM to commit: (a) notes/dcl_mathematics_scope_and_outline.md (one-line roster edit) and (b) notes/type_theoretic_foundations_directed_cubical.md (new foundations note). ALSO present: an untracked src/ — this is JACK'S ACTIVE AGDA WORK. Do NOT commit src/. Commit ONLY the two notes files, then push."
   - "Cross-subproject content: notes/bell_chsh_separability_on_lattice.md is the nonlocality backbone for Paper VI (dcl-paper-06-Bell-test), NOT Paper IV (dcl-mathematics' own paper). It is housed here as shared mathematics. Do not mistake it for Paper IV scope or wire it into paper/sections/."
   - "Internal-only until derived: the note makes a (conditional, open) Bell claim. Per the falsifiability-framing rule, nothing here goes public / onto the claim map until a result is derived. No push to any public-facing surface beyond the private dcl-mathematics origin."
 decisions:
@@ -20,12 +20,15 @@ consumed_at:
 ---
 
 ## Summary
-A formal mathematical note settling "can the A=1 lattice violate Bell/CHSH, and
-through what structure" was written in `dcl-mathematics/notes/` as the backbone
-for Paper VI (`dcl-paper-06-Bell-test`). The note is committed locally but
-unpushed; a one-line roster entry pointing to it was added to the scope/outline
-note and left uncommitted. The PM is asked to commit the one-liner and push
-`dcl-mathematics` to origin, observing cross-repo serialization.
+Two `dcl-mathematics/notes/` files are pending a commit+push by the PM:
+(1) the Bell/CHSH separability note (committed as `3ed082a`, unpushed); and the
+two UNCOMMITTED edits — (2) a one-line roster entry in
+`notes/dcl_mathematics_scope_and_outline.md`, and (3) a new foundations note
+`notes/type_theoretic_foundations_directed_cubical.md` (whether HoTT is the right
+math for the lattice; conclusion: directed+cubical+univalent type theory as a
+*foundational layer*, non-blocking). The PM commits the two uncommitted notes and
+pushes `dcl-mathematics`, observing cross-repo serialization — and must NOT touch
+the untracked `src/`, which is Jack's active Agda work.
 
 ## Shipped
 - `3ed082a` — `notes/bell_chsh_separability_on_lattice.md` (new, 275 lines):
@@ -36,8 +39,10 @@ note and left uncommitted. The PM is asked to commit the one-liner and push
   (ER=EPR-flavored; matches distance-independent entanglement); two edge
   conditions (non-separable amplitude + non-signalling); δp_min as the candidate
   entangling nonlinearity. **Committed locally, NOT pushed.**
-- Uncommitted: `notes/dcl_mathematics_scope_and_outline.md` — one bullet under
-  Pointers cross-referencing the new note as the Paper VI backbone.
+- Uncommitted (PM to commit): `notes/dcl_mathematics_scope_and_outline.md`
+  (one-line roster cross-ref) and `notes/type_theoretic_foundations_directed_cubical.md`
+  (new foundations note).
+- Untracked, DO NOT COMMIT: `src/` — Jack's active Agda work.
 
 ## Verification
 N/A (prose/math notes; no tests). `git status`: branch `main` ahead of
@@ -56,13 +61,14 @@ dcl-mathematics notes dir, not Paper IV; (3) internal-only until a result is
 derived.
 
 ## → Consumer actions
-- [ ] Repo `dcl-mathematics`: `git status` / `git diff` first; confirm the only
-      pending change is `notes/dcl_mathematics_scope_and_outline.md` (the roster
-      one-liner) and that no parallel session is mid-edit.
-- [ ] Commit that one file (e.g. `notes: cross-ref Bell separability note from
-      the scope/outline roster`).
-- [ ] Push `dcl-mathematics` `main` to origin (brings `3ed082a` + the one-liner
-      commit to origin; was ahead 1, will be ahead 2 before push).
+- [ ] Repo `dcl-mathematics`: `git status` / `git diff` first. Pending notes:
+      `notes/dcl_mathematics_scope_and_outline.md` (roster one-liner) and
+      `notes/type_theoretic_foundations_directed_cubical.md` (new note). Untracked
+      `src/` is **Jack's active Agda work — leave it untracked, do NOT commit it.**
+- [ ] Commit ONLY those two notes files (e.g. `notes: type-theoretic foundations
+      thread + scope-outline cross-refs`). Confirm `src/` is not staged.
+- [ ] Push `dcl-mathematics` `main` to origin (brings `3ed082a` + the new notes
+      commit; was ahead 1, will be ahead 2 before push).
 - [ ] Board (optional): no change required; the Bell work is already tracked by
       issue #21 (project 6). Mention the math backbone there only if useful.
 - [ ] No public surface: do not push/derive any claim onto the claim map or any
