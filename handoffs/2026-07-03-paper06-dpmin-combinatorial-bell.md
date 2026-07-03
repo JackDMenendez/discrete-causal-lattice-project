@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-core        # author-reasoning home; recorded in dcl-cor
 branch: main
 commits: []                         # physics/design finding; no code shipped
 pr: none
-status: open
+status: consumed
 state: blocked                      # Paper 06 CHSH run still blocked, but the MECHANISM is now identified
 semver: n/a (physics/design finding; may later yield a core3d joint-session capability — future MINOR, TBD)
 flags:
@@ -18,8 +18,8 @@ flags:
 decisions:
   - "Author (Jack) confirmed 2026-07-03: dp_min solves the Bell requirement because the discrete joint distribution is combinatorial and therefore the joint collapse is instantaneous. This answers the two long-open questions from handoff 2026-06-27-entangled-pair-preparation-physics-gap: Q2 (tensor structure comes FROM the combinatorics of one shared discrete budget over the product grid) and Q3 (yes, discreteness does the work)."
   - "The 2026-06-27 hypothesis ('prob_floor on a shared budget makes the joint collapse non-factorizable') is correct IN SPIRIT, but only when the budget is joint-combinatorial (product cells). Applied to marginal per-session budgets (the current placeholder) it cannot work."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-03
 ---
 
 ## Summary

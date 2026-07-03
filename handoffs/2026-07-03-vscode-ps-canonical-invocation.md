@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: [ab253f6, d3e6290, 6985a36]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (unversioned dev-env tooling)
 flags:
@@ -17,8 +17,8 @@ flags:
 decisions:
   - Canonical Windows venv is now C:\Users\jackd\.venv-win (Python 3.14) with cupy-cuda12x[ctk]; the old %USERPROFILE%\.venv (3.14) was deleted.
   - Repos + focused Claude sessions are launched via vscode-ps.cmd, except dcl-website via vscode-quarto.cmd.
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — memory recorded (reference-canonical-venv-win); dcl-web=dcl-website confirmed. DEFERRED (lazy pass): per-repo settings.json commits (11 repos) + opening an infra/dev-env board issue.
+consumed_at: 2026-07-03
 ---
 
 ## Summary

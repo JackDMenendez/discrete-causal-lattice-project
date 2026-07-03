@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-core
 branch: feature/v0.3.0-peierls-gauge
 commits: [5f816ce, 0c7ab8f]   # committed + pushed to origin; NOT merged, no PR yet
 pr: none   # branch pushed; open at https://github.com/JackDMenendez/dcl-core/pull/new/feature/v0.3.0-peierls-gauge
-status: open
+status: consumed
 state: in-progress          # CPU-first slice complete + pushed on a branch; merge + GPU + release remain
 semver: 0.2.2 -> 0.3.0 (MINOR, unreleased, NOT yet bumped in files)
 flags:
@@ -20,8 +20,8 @@ flags:
 decisions:
   - "R4 readout = experiment-side default (susceptibility estimator = symmetric second difference rho(+B)+rho(-B)-2rho(0), lives in tests), NOT an in-engine chi() API. This resolves the doc's open definitional choice (R4) toward the lightweight option; confirm."
   - "Electric sector delivered via the EXISTING external_potential (temporal A_0 -> E = -grad A_0), not a new argument. Magnetic via new vector_potential (spatial A -> B). Both threaded through TickScheduler as optional fields."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — board #20 + memory recorded; merge/GPU/release gates remain with dcl-core owner
+consumed_at: 2026-07-03
 ---
 
 ## Summary
