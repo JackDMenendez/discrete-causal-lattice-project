@@ -6,13 +6,13 @@ repo: dcl-core
 branch: feat/v0.3.0-peierls-phase1
 commits: []
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (design doc)
 flags: []
 decisions: []
-consumed_by:
-consumed_at:
+consumed_by: dcl-core (focused)
+consumed_at: 2026-07-02
 ---
 
 ## Summary
