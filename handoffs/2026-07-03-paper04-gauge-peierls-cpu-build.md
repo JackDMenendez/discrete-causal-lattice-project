@@ -3,14 +3,14 @@ handoff: 2026-07-03-paper04-gauge-peierls-cpu-build
 from: dcl-core (focused)
 to: PM
 repo: JackDMenendez/dcl-core
-branch: main
-commits: [UNCOMMITTED-WORKING-TREE]   # not yet committed; see flags + Consumer actions
-pr: none
+branch: feature/v0.3.0-peierls-gauge
+commits: [5f816ce, 0c7ab8f]   # committed + pushed to origin; NOT merged, no PR yet
+pr: none   # branch pushed; open at https://github.com/JackDMenendez/dcl-core/pull/new/feature/v0.3.0-peierls-gauge
 status: open
-state: in-progress          # CPU-first slice complete but uncommitted; GPU + release remain
+state: in-progress          # CPU-first slice complete + pushed on a branch; merge + GPU + release remain
 semver: 0.2.2 -> 0.3.0 (MINOR, unreleased, NOT yet bumped in files)
 flags:
-  - "Work is UNCOMMITTED in dcl-core's working tree (branch main) — no SHA exists. Must be committed (ideally on a feature branch) before anything downstream pins it."
+  - "Committed + pushed to origin/feature/v0.3.0-peierls-gauge (5f816ce code, 0c7ab8f doc-wording) — NOT merged to main, NO PR opened. Must be reviewed/merged before anything downstream pins it. Still unreleased."
   - "Version files deliberately NOT bumped (still 0.2.2); the 0.3.0 bump + Zenodo DOI + release_notes/v0.3.0.md are the gated release step, owner-only."
   - "Ward-identity test (#2) is a BULK, float-tolerance check — NOT the bit-exact 'token densities invariant tick-for-tick' the doc phrases. Deliberate: a linear gauge Lambda=g.x is not single-valued on the periodic torus, and a rotated complex's magnitude is not ULP-invariant. Interior (margin-1) covariance is exact to 1e-12."
   - "Peierls mid-point re-indexed to the actual shift direction: doc R2 writes A_mid=1/2(A(x)+A(x+v)) for a +v hop; code uses A_mid=1/2(A(x)+A(x-v)) because backend.shift brings amplitude x-v -> x. Same rule, correct index for the engine's convention; verified by the Ward test."
@@ -70,7 +70,7 @@ likely to bite a careless reader:
    read the passing #4 as "Q-tensor confirmed."
 
 ## → Consumer actions
-- [ ] **Commit gate:** ensure the dcl-core working-tree gauge changes get committed (prefer a `feature/v0.3.0-peierls` branch, not bare `main`). Keep the pre-existing `docs/design/04` wording edit as a separate concern — it is not part of this gauge-code change.
+- [ ] **Merge gate:** the work is committed + pushed to `origin/feature/v0.3.0-peierls-gauge` (5f816ce code, 0c7ab8f doc-wording) but NOT merged and NO PR is open. Open a PR / review + merge to `main` before anything downstream pins it.
 - [ ] **Board:** on project 6, locate the Paper IV / v0.3.0 gauge-sector (`exp_03`) issue (the successor to issue 007's core3d roadmap; open one if absent) and mark: R1–R3 + R4-default + tests #1–4,#6 landed (CPU-first, uncommitted); R2-GPU/R5, test #5, and release deferred.
 - [ ] **Memory:** record in the consuming session's memory that dcl-core v0.3.0 Peierls gauge coupling is CPU-complete-but-uncommitted on the working tree, release-gated, with R4 resolved to the experiment-side estimator. Cross-link the existing CuPy fork-bomb hazard note.
 - [ ] **Gate — do NOT release:** do not tag/deposit v0.3.0 or bump Paper IV's `dcl_core` pin to `@v0.3.0` until the work is committed AND (GPU decision made OR explicitly scoped out) AND version bump + Zenodo done, in that order (per dcl-core release flow).
