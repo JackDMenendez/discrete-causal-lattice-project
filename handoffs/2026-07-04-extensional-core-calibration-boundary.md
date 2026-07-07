@@ -19,8 +19,8 @@ flags:
 decisions:
   - "PM recommends core3d-only NOW, `core` at its next MAJOR bump. dcl-core to confirm."
   - "PM recommends lightest-viable enforcement (a `dcl_core.calibration` module + naming discipline, optionally phantom/units types), not a heavy typed-units dependency. dcl-core to confirm."
-consumed_by:
-consumed_at:
+consumed_by: dcl-core (focused) — see return handoff 2026-07-06-v0.3.0-calibration-boundary-landed
+consumed_at: 2026-07-06
 ---
 
 ## Summary
