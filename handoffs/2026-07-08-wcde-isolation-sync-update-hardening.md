@@ -14,6 +14,7 @@ flags:
   - "DEV-ONLY until isolation promotes: `--sync off` and the update-suppression seeding ONLY affect isolated (DEV) launches. PROD (`c:\\prod\\wcde`) launchers have no `--extensions-dir`/isolation, so PROD sessions still use the global `%USERPROFILE%\\.vscode\\extensions` (153 exts) and the global user settings (which already carry `update.mode: manual`). The user's observed 'DEV ~14 exts vs PROD 100+' is this gap BY DESIGN, not a bug; it closes when isolation rolls to PROD."
   - "SEED-IF-ABSENT is not a backfill: `:seed_user_settings` writes the update keys ONLY when an isolated data dir has no `User\\settings.json`. Existing isolated data dirs self-heal on next launch (none currently have a settings.json). But a data dir that later grows a settings.json WITHOUT the update keys will NOT be backfilled. Chosen to avoid clobbering UI-accumulated settings; confirm acceptable at commit review."
   - "VALUE-TYPE drift vs global settings: the seed writes `\"extensions.autoUpdate\": false` (boolean) whereas the user's global `%APPDATA%\\Code\\User\\settings.json` uses `\"off\"` (string). Both disable extension auto-update, but a careful diff will show the mismatch — reconcile to one form at commit if desired."
+  - "VIM KEYBINDINGS NOW DUPLICATED (deliberate, per user's 'consistency trumps duplication'): the user-scope Vim keybindings live in BOTH the user's personal global `%APPDATA%\\Code\\User\\settings.json` (for PROD / non-isolated launches) AND wcde's tracked `lib\\vsprofiles\\user-settings.json` template (copied into each isolated data dir). wcde cannot source the user's personal file, so the template is wcde's canonical copy — if the user changes their global Vim bindings, MIRROR them into the template (and vice versa). When isolation promotes to PROD, consider seeding PROD from the same template to collapse this back to one source. Seed is seed-if-absent (no backfill), but no isolated settings.json exists yet, so all current flavors pick it up on next launch."
   - "NEW `exp-tex` FLAVOR (further drift past 2026-07-06): the tree gained a `vscode-exp-tex.cmd` launcher + `laytex-env.cmd` env (MiKTeX-on-PATH) for an experimental python+LaTeX flavor. As found, `vscode-exp-tex.cmd` set `WCDE_VSCODE_PROFILE=python` — COLLIDING with vscode-python's isolation dir and provisioning ZERO tex extensions. Fixed this session: relabelled to `exp-tex`, added `exp-tex.txt` (ms-python.python, ms-toolsai.jupyter, james-yu.latex-workshop) + `python.txt` (the pure-python flavor had NO manifest, rode only common.txt), fixed `laytex-env.cmd`'s copy-paste header/echo (said `miktex`), and added both rows to the vsprofiles README. NOTE: the file/token is spelled `laytex` (not `latex`) — left as-is pending the user's call; renaming would touch the requires line + filename."
 decisions:
   - "Placed `--sync off` at the single args-assembly line in vscode-isolation.cmd (one edit covers every launcher: ps/web/ucrt64/mingw64/haskell/agda/sage/tex/python) rather than editing each vscode-*.cmd."
@@ -54,6 +55,14 @@ follows.
   echo that still said `miktex-env` / `------------ miktex`.
 - `shells/windows/lib/vsprofiles/README.md`: added `python` and `exp-tex` rows to
   the profile→launcher table.
+- `shells/windows/lib/vsprofiles/user-settings.json` (new) + `vscode-isolation.cmd`:
+  the seed now COPIES this canonical template into a fresh isolated
+  `<data>\User\settings.json` instead of echoing update keys. The template carries
+  the update-suppression keys AND the user-scope Vim keybindings (`jj`→Esc,
+  `<leader>d`, `<C-n>`, `K`). Rationale: those keybindings only take effect at
+  USER-settings scope, and isolated `--user-data-dir`s don't inherit the global
+  user settings — so without this, every isolated flavor silently lost them.
+  Copying a template also dodges cmd's `<`/`>` echo-escaping.
 - Launcher `requires`-audit trims (on top of the user's own launcher audit):
   `vscode-haskell.cmd` → `global win git-cli haskell vscode` (dropped
   miktex+sagemath; also fixed a stale `vscode-ps` copy-paste header);
@@ -99,7 +108,11 @@ follows.
       setup-vscode.cmd, (d) the `exp-tex` flavor: `vscode-exp-tex.cmd` profile
       relabel + `laytex-env.cmd` header fix + new `exp-tex.txt`/`python.txt`
       manifests + README rows, (e) the launcher `requires`-audit trims
-      (vscode-haskell, vscode-mingw64, vscode-cmd) + stale-header fixes.
+      (vscode-haskell, vscode-mingw64, vscode-cmd) + stale-header fixes,
+      (f) the `user-settings.json` seed template + its copy-based seeding.
+- [ ] Keep `lib/vsprofiles/user-settings.json` in sync with the user's global
+      Vim keybindings; when isolation reaches PROD, consider seeding PROD from the
+      same template so the bindings have ONE source instead of two.
 - [ ] Decide whether to RETIRE `shells/windows/cmd/env/texlive-env.cmd` now that
       no launcher references it (MiKTeX is the standardized TeX distro), or keep it
       as an available-but-unused loader.
