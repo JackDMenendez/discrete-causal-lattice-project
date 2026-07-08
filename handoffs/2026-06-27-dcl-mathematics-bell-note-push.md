@@ -6,7 +6,7 @@ repo: dcl-mathematics
 branch: main
 commits: [3ed082a]                  # the note (committed locally, UNPUSHED); one-liner still uncommitted
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (notes only; no software change)
 flags:
@@ -15,8 +15,13 @@ flags:
   - "Internal-only until derived: the note makes a (conditional, open) Bell claim. Per the falsifiability-framing rule, nothing here goes public / onto the claim map until a result is derived. No push to any public-facing surface beyond the private dcl-mathematics origin."
 decisions:
   - "The note (3ed082a) was committed directly by the focused session rather than serialized through the PM — accepted exception this time (user's call). The roster one-liner was deliberately left uncommitted so the PM performs the commit+push, keeping the serialization discipline for the remaining change."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-07
+# PM commit fedf7cf (5 notes/*.md: transcendentals manifesto, type-theory, phase-clock,
+# extensional/intensional sorting tool, roster cross-refs) + prior 3ed082a (Bell note)
+# pushed to origin/main. src/ left untracked (Jack's Agda). notes/1705.07442v5.pdf
+# (809KB binary reference paper, not in the handoff's file list) DELIBERATELY NOT committed
+# — left untracked pending user's call on vendoring reference PDFs.
 ---
 
 ## Summary

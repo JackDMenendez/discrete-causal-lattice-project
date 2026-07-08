@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-core
 branch: feature/v0.3.0-peierls-gauge
 commits: [599be5e, 0405c36]   # Q-tensor verdict + the GPU kernel it rode on. UNPUSHED (see flag 4).
 pr: none
-status: open
+status: consumed
 state: in-progress   # test #4 landed; test #5 (E+B dispersion order) still ahead
 semver: 0.2.2 -> 0.3.0 (MINOR, UNRELEASED). exp_04 + a de-xfailed test; no public-API change beyond the v0.3.0 additions already logged.
 flags:
@@ -17,8 +17,14 @@ flags:
   - "REFERENCE PATH: Paper I lives at j:\\dev\\dcl (NOT c:\\dev\\dcl); the cross-check reference is dcl/src/utilities/induced_gauge_action.py. External junctions under dcl-core/external were not present this session."
 decisions:
   - "PM to decide whether to fold the framing correction into design doc 04 and relay it to dcl-paper-04 (recommended) -- the 'test #4 N-limited' wording is now factually wrong."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-07
+# PM actions: (1) paper-04 relay FILED as handoff 2026-07-07-paper04-gauge-Q-tensor-framing-correction.
+# (2) dcl-core memory written by the dcl-core session itself (per user, to avoid double-entry).
+# (3) Board #20 DEFERRED by user decision until the GPU upgrade is purchased (test #5 is GPU-gated;
+#     do all non-GPU work first). Tracked in PM memory [[gpu-upgrade-gates-test5-board20]].
+# (4) Release gate HONORED — v0.3.0 not cut; the 4 dcl-core commits stay unpushed (user's call).
+# design-doc-04 (dcl-core) cross-doc fix still to be relayed to a dcl-core session separately.
 ---
 
 ## Summary
