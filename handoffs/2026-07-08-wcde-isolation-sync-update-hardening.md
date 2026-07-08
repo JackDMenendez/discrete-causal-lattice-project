@@ -54,6 +54,14 @@ follows.
   echo that still said `miktex-env` / `------------ miktex`.
 - `shells/windows/lib/vsprofiles/README.md`: added `python` and `exp-tex` rows to
   the profile→launcher table.
+- Launcher `requires`-audit trims (on top of the user's own launcher audit):
+  `vscode-haskell.cmd` → `global win git-cli haskell vscode` (dropped
+  miktex+sagemath; also fixed a stale `vscode-ps` copy-paste header);
+  `vscode-mingw64.cmd` → `global win-dev mingw64 vscode` (dropped texlive+sagemath;
+  header updated); `vscode-cmd.cmd` → realigned to `global win git-cli miktex
+  sagemath vscode msys2-tools`, now IDENTICAL to vscode-ps (they share the `ps`
+  profile) and matching CLAUDE.md. Net: no launcher loads `texlive` anymore
+  (standardized on MiKTeX); `texlive-env.cmd` is now unreferenced.
 
 ## Verification
 - `--sync off` confirmed present in the live launch command line.
@@ -90,7 +98,11 @@ follows.
       vscode-isolation.cmd, (c) the `settings.json,` redirect-typo fix in
       setup-vscode.cmd, (d) the `exp-tex` flavor: `vscode-exp-tex.cmd` profile
       relabel + `laytex-env.cmd` header fix + new `exp-tex.txt`/`python.txt`
-      manifests + README rows.
+      manifests + README rows, (e) the launcher `requires`-audit trims
+      (vscode-haskell, vscode-mingw64, vscode-cmd) + stale-header fixes.
+- [ ] Decide whether to RETIRE `shells/windows/cmd/env/texlive-env.cmd` now that
+      no launcher references it (MiKTeX is the standardized TeX distro), or keep it
+      as an available-but-unused loader.
 - [ ] Decide the `laytex` vs `latex` spelling for `laytex-env.cmd` / the `laytex`
       requires-token; if renaming, update `vscode-exp-tex.cmd`'s requires line and
       the filename together.
