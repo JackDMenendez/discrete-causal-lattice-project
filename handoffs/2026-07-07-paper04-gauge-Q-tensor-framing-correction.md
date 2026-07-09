@@ -13,6 +13,7 @@ flags:
   - "AUTHORITATIVE, not conjecture: this correction is sourced from dcl-core RUNNING CODE (experiment exp_04, `data/exp_04_induced_gauge_Q_tensor.log`), which reproduces Paper I App. B's induced gauge action tensor Q=[[8,4,-4],[4,8,-4],[-4,-4,8]] EXACTLY — max|Q - Paper_I_Q| = 0, eigenvalues {4,4,16}, optical axis (1,1,-1). The existing 'test #4 is N-limited/GPU-bound' wording in notes/gauge_sector_structural_conclusion.md is therefore FACTUALLY WRONG and must be corrected, not softened."
   - "THE CONFLATION (the substance): the {4,4,16} verdict is the induced-ACTION Wilson-loop tensor (bipartite plaquette holonomy 1-Re W_ab = F^T Q F), which is EXACT in the lattice interior for a uniform field — no large N, no GPU. The 'N-limited' belief came from measuring a DIFFERENT observable, the wavepacket DENSITY response (|psi(+B)|^2+|psi(-B)|^2-2|psi(0)|^2), which robustly gives a 2:1 axis:planar ratio (NOT 4:1) across N/width/momentum/parity. Two different observables were conflated. Do not describe test #4 as GPU/large-N in the notes."
   - "STILL OPEN / STILL GPU-BOUND — do not over-claim: only test #5, the full E+B photon-DISPERSION birefringence-ORDER verdict (O(1) dim-4 vs (ka)^2-suppressed vs null), is genuinely GPU/large-N and remains UNRESOLVED. That is the load-bearing physics question (paper-04 §2.3, E+B observability). Falsifiability discipline: the operator-level Q tensor is exact, but observable birefringence is NOT yet established — keep §2.3 framed as the open question."
+  - "RELEASE-LIVE: dcl-core v0.3.0 is now published and already installed in the shared virtual environment. Paper IV can use the tagged release directly; do not treat core release availability as a blocker."
   - "CROSS-DOC: the same stale 'test #4 N-limited' wording also lives in dcl-core `docs/design/04` — that is NOT the paper-04 session's file to edit. Flag it for coordination; the PM will relay a design-doc-04 fix to a dcl-core session separately."
 decisions:
   - "Relay chosen over PM directly editing paper-04: this session (dcl-website/PM) owns only dcl-project + dcl-website. paper-04 notes/docs are the province of a paper-04 focused session, reached by this handoff."
@@ -30,12 +31,14 @@ running code, not deferred, and never actually N-limited/GPU-bound. The
 observable (density response, 2:1) instead of the induced action (Wilson loop,
 4:1 = {4,4,16}). Paper IV's notes carry the now-incorrect wording and must be
 corrected. Only **test #5** (the E+B photon-dispersion birefringence *order*)
-remains genuinely GPU/large-N and open.
+remains genuinely GPU/large-N and open. `dcl-core v0.3.0` is now live and already
+installed in the shared virtual environment, so the focused Paper IV session can
+use the tagged release directly.
 
 ## Shipped
 Nothing in paper-04 yet — this is a PM directive. Upstream evidence (in dcl-core,
-UNPUSHED on `feature/v0.3.0-peierls-gauge`, commit `599be5e`): `exp_04` extracts
-Q from the engine's Peierls plaquette holonomy and cross-checks
+now released at `v0.3.0` and already available in the shared virtual environment):
+`exp_04` extracts Q from the engine's Peierls plaquette holonomy and cross-checks
 `dcl/src/utilities/induced_gauge_action.py`; the previously-xfailed
 `test_magnetic_response_reproduces_Q_eigenvalues_4_4_16` is now a passing test.
 
@@ -43,11 +46,15 @@ Q from the engine's Peierls plaquette holonomy and cross-checks
 Upstream (dcl-core): full suite 299 passed / 1 skipped / 26 xfailed (the one
 moved test is the de-xfailed verdict); `exp_04` log records Q exact, eigenvalues
 {4,4,16}, axis (1,1,-1), cross-check PASS. No paper-04 verification yet (docs).
+Release availability: `dcl-core v0.3.0` is present in the shared virtual
+environment.
 
 ## Remaining
 - The paper-04 doc edits below.
 - Test #5 (E+B dispersion order) stays open and GPU-bound — the real remaining
   gauge deliverable; not this handoff's scope to resolve, only to frame correctly.
+- No local install step is needed for the focused session; use the shared
+  environment's already-installed `dcl-core v0.3.0`.
 
 ## Decisions & flags
 See frontmatter. Load-bearing: the correction is authoritative (running code,
