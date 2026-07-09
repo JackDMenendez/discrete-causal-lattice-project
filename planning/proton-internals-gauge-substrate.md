@@ -133,6 +133,8 @@ The pivot from abelian to non-abelian; the moment Paper II "starts running numer
 ### Phase 4 — Proton bound state and confinement signature  *(owner: proton-internals paper; high risk — the payoff)*
 - Assemble: three quarks (`uud`), SU(3) colour binding (Phase 1), singlet projection
   (Phase 2), *n*-body session (Phase 3) → seek a bound, confined, colour-singlet state.
+  Assembly interface: `dcl_core.particles.make_hadron([u,u,d], …)` — the particle-factory
+  module (see `particle-spectrum-and-energies.md` §5).
 - Observables to define/measure: a confinement signature (Wilson-loop area law / string
   tension analogue), and whether the colour factor has a **mass-analogue amplitude** the
   way chirality mixing becomes mass via clock density.

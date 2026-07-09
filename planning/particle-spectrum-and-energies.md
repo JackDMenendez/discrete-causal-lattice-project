@@ -6,9 +6,9 @@
 **Companion to:** [`proton-internals-gauge-substrate.md`](proton-internals-gauge-substrate.md)
 (same engine road; this doc adds *mass measurement* and the *energy-in-lattice-parameters*
 discipline on top).
-**Owning repos (eventual):** `dcl-core` (engine + measurement), `dcl-generator-zoo` (the
-representation catalogue), `dcl-paper-02-sm-derivation` (irrep→particle map, gauge prefactor),
-a future particle-spectrum / discrete-probability paper.
+**Owning repos (eventual):** `dcl-core` (engine + measurement + the `dcl_core.particles`
+factory), `dcl-generator-zoo` (the representation catalogue), `dcl-paper-02-sm-derivation`
+(irrep→particle map, gauge prefactor), a future particle-spectrum / discrete-probability paper.
 **Grounded in:** `dcl-generator-zoo` (71-generator catalogue), Paper II
 [`notes/work_plan.md`](../../dcl-paper-02-sm-derivation/notes/work_plan.md) (Phase 4 g-ratio,
 lattice scale unfixed), `dcl-core/notes/color_structure.md` (mass via chirality mixing),
@@ -121,7 +121,49 @@ one-debt CI tripwire in `test_calibration_boundary.py` guards the invariant that
   first principles, rather than importing it, is the open question that decides whether absolute
   masses are discoveries or a single decision.
 
-## 5. Open questions
+## 5. The particle-factory module (`dcl_core.particles`) — the delivery vehicle
+
+**Goal (user, 2026-07-09):** eventually a **particle factory** as part of the core — a new
+submodule `dcl_core.particles` that turns a particle *identity* into a ready-to-evolve lattice
+*state*. It is the front door for every spectrum experiment: name a particle (or a composite),
+get a `core3d` session initialised with the right internal C¹² multiplet and wavepacket envelope,
+evolve, read back `E = E₀ · Ê`.
+
+**Responsibilities**
+
+- **Particle registry / spec schema.** Each Standard Model particle → its (SU(3), SU(2)) irrep +
+  chirality + generation + charge/hypercharge, keyed to the generator-zoo catalogue's stable
+  generator names. **Consumes** `dcl-generator-zoo/data/generator_catalogue.json` — closing the
+  loop the catalogue was made machine-readable for; the factory *names* generators, it does not
+  re-enumerate them.
+- **State construction.** `make_particle(spec, momentum=k·a, envelope=…, backend=…)` sets the
+  per-site C² ⊗ C² ⊗ C³ amplitude to the particle's multiplet and lays down a wavepacket in
+  lattice-native units.
+- **Composite / hadron construction.** `make_hadron([u, u, d], …)` → a colour-singlet three-quark
+  configuration on a multi-particle session (proton = uud), enforcing token thirds (`N ≡ 0 mod 3`)
+  and the colour-singlet projector. This is the assembly interface for Phase 4 of the proton plan.
+
+**Design constraints (non-negotiable)**
+
+- **Extensional side of the wall.** The factory lives on the constant-free side: its inputs are
+  lattice-native quantum numbers (irrep, generation, mass angle, `k·a`, `N`), **never** a mass in
+  MeV. It must not import from `dcl_core.calibration`. Energies measured from its states come out
+  as `Ê`; only the boundary converts to SI.
+- **Per-particle discovery/decision provenance.** Two modes, declared per particle:
+  - *predictive* — the mass angle is derived (from clock density / token structure / generation)
+    → the energy is a **discovery**;
+  - *seeded* — the mass angle is not yet derived, so it is set from an experimental mass; that
+    seed is an **imported number**, tagged as a calibration input, not a free lattice quantity.
+
+  The factory surfaces, per particle, which mode it is in — the per-particle version of the
+  one-debt audit.
+
+**Sequencing.** The factory is the *interface* that packages spectrum items 1–3 (particle map,
+full C¹² engine, mass mechanism), so it lands *after* those — but its API is worth pinning now so
+the engine work targets a clean front door. Likely a fourth top-level submodule alongside `core`,
+`core3d`, `calibration`.
+
+## 6. Open questions
 
 1. **Does the framework fix `a` / E₀ from first principles?** If not, absolute energies carry
    exactly one imported number (`tick_seconds`) and mass *ratios* carry none — state this plainly.
@@ -134,7 +176,7 @@ one-debt CI tripwire in `test_calibration_boundary.py` guards the invariant that
    coupling ratios into absolute couplings — a parallel "ratios then absolutes" story on the gauge
    side.
 
-## 6. Pointers
+## 7. Pointers
 
 - Companion: [`proton-internals-gauge-substrate.md`](proton-internals-gauge-substrate.md)
   (the C¹²-in-`core3d` engine road these energies ride on).
