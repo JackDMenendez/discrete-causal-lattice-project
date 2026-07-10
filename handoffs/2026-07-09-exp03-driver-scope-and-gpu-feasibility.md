@@ -13,7 +13,7 @@ flags:
   - "DRIVER DOES NOT EXIST ANYWHERE: the load-bearing gauge test -- the full E+B photon-dispersion / induced-response birefringence-ORDER sweep (Paper IV `exp_03`, dcl-core design-doc `test #5`) -- is NOT implemented in either repo. dcl-core ships only the MAGNETIC-ONLY cross-check `exp_04` (N=20, the exact {4,4,16} Q-tensor); `tests/test_peierls.py:21-27` explicitly states test #5 is 'GPU/large-N bound and not part of the CPU-first build'. So there is nothing to run yet -- the driver must be authored before any verdict exists."
   - "DECISIVE, NOT CONFIRMATORY: exp_03 decides whether the gauge sector is (a) unobservable [framework consistent], (b) (ka)^2-suppressed [a new dim-6-like prediction], or (c) O(1) dim-4 [excluded -> a real tension/near-falsification]. All three are live. Do not schedule it as a rubber-stamp; budget for a possible tension surfacing."
   - "NOT A v1.0 BLOCKER (recommendation): Paper IV's falsifiable result is the KINEMATIC channel (audit row PASS), independent of exp_03. The gauge row is honestly framed operator-exact / observable-OPEN (PART). A v1.0 deposit can ship with the gauge sub-question explicitly open. Recommend NOT gating the paper on exp_03."
-  - "R4 READOUT DEFINITION still owner-gated: the specific observable/estimator (what token-redistribution / susceptibility to measure vs the zero-field baseline, E+B) is the real remaining DESIGN gate -- not engine capability. GPU/parallelism provisioning (the old gate #3) is now MOOT: GPU verified working this session."
+  - "R4 READOUT DEFINITION now SETTLED (2026-07-09, user): chosen readout is the STATIC E+B induced-action CANCELLATION SCREEN (extend exp_04's magnetic Wilson-loop extraction to the electric/temporal-plaquette sector; combine into effective epsilon + mu-inverse; test whether the leading photon speed split Delta_v cancels). Spec: paper-04 `notes/exp_03_R4_cancellation_screen_spec.md`. KEY CONSEQUENCE: the screen is a STATIC, SMALL-N operator measurement (exp_04 ran N=20) -- CPU-cheap, does NOT need the GPU/large-N sweep. The 41.5x-GPU story applies to the LATER k-resolved order measurement, not this screen. User has GREEN-LIT implementation of the screen. GPU provisioning was already moot."
   - "SCHEDULING BASIS CHANGED: the '~5.5 h/axis' cost the plan carried is a CPU-path number. Measured GPU speedup on the real box is 41.5x at 128^3 (E+B hop) -> ~8 min/axis, whole sweep in hours not days. Any planning that used 5.5 h/axis CPU is obsolete. See memory `exp03-gpu-feasibility`."
 decisions:
   - "RECOMMEND: exp_03 driver is Paper IV scope (this repo's experiment) consuming the already-SHIPPED dcl_core v0.3.0 primitives (Peierls hop, uniform_B_potential, vector/temporal potential threading, GPU RawKernel). NO new dcl-core engine capability is strictly required -- the R4 induced-response readout can be composed experiment-side (density/token diffs + small-field fit), as the reference estimator in dcl-core's test_peierls already does. PM to confirm this split rather than commissioning a new dcl-core feature."
@@ -95,9 +95,12 @@ engine feature) is defensible but heavier -- PM's call which split we want.
 - [ ] **Confirm scope split:** exp_03 driver + R4 readout authored in **paper-04**
       consuming dcl_core v0.3.0 primitives (no new engine feature). If instead you
       want R4 as a reusable dcl-core engine capability, file a dcl-core spec/handoff.
-- [ ] **Relay the still-open owner-gated item to the user:** settle the **R4
-      readout definition** (the estimator / exact observable). Note GPU
-      provisioning is DONE (GTX 1060 verified, 41.5x) -- drop it from the gate list.
+- [x] ~~Relay the R4 readout-definition gate to the user~~ **DONE 2026-07-09:**
+      R4 settled = static E+B induced-action cancellation screen (Choice 1); spec
+      in paper-04 `notes/exp_03_R4_cancellation_screen_spec.md`; user green-lit
+      implementation. GPU provisioning dropped (GTX 1060 verified, 41.5x). The
+      screen is CPU-cheap/small-N; the GPU sweep is only for the later k-resolved
+      order measurement (out of scope for the screen).
 - [ ] **Update planning cost basis:** the "5.5 h/axis" is CPU; real GPU cost is
       ~8 min/axis (whole sweep hours). Fix any schedule/ledger that used the CPU
       number.
