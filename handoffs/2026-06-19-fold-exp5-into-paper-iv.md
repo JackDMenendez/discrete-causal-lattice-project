@@ -6,13 +6,13 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: []
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper / manuscript)
 flags: [exp5-redundant-fold-as-restatement-not-new-claim, spreading-half-must-survive-continuum-limit]
 decisions: [exp5-not-a-falsifier-repo]
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-09
 ---
 
 ## Summary

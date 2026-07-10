@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: []                         # directive; no paper-04 commits yet — the focused session makes them
 pr: none
-status: open
+status: consumed
 state: complete                     # directive is fully specified; execution is the paper-04 session's
 semver: n/a (notes/docs; no software change)
 flags:
@@ -17,8 +17,8 @@ flags:
   - "CROSS-DOC: the same stale 'test #4 N-limited' wording also lives in dcl-core `docs/design/04` — that is NOT the paper-04 session's file to edit. Flag it for coordination; the PM will relay a design-doc-04 fix to a dcl-core session separately."
 decisions:
   - "Relay chosen over PM directly editing paper-04: this session (dcl-website/PM) owns only dcl-project + dcl-website. paper-04 notes/docs are the province of a paper-04 focused session, reached by this handoff."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-09
 ---
 
 ## Summary
