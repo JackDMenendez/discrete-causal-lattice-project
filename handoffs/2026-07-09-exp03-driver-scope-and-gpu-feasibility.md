@@ -111,3 +111,40 @@ engine feature) is defensible but heavier -- PM's call which split we want.
 - [ ] **Cross-doc:** relay a dcl-core design-doc-04 fix (stale "test #4 N-limited"
       + "test #5 deferred") to a dcl-core session -- already noted in the
       2026-07-07 gauge-Q-tensor handoff; this reconfirms it is still pending.
+- [ ] **TACTICAL LEDGER -- new gating factor (see Addendum):** record that the
+      gauge-sector *verdict* is gated on a NOT-YET-EXISTING electric-sector
+      induced-action derivation (theory work, likely a Paper I App. B revision),
+      absent from both Paper I and Paper II. Weigh this in the Paper III-vs-IV
+      ordering: Paper IV's second (gauge) falsifiable channel is not deliverable
+      without this derivation; the kinematic channel remains its one clean
+      falsifiable result. (Does NOT block a Paper IV v1.0 deposit.)
+
+## Addendum (2026-07-09): electric-block derivation is a GATING FACTOR
+
+Implementing the screen (`exp_03a`, committed paper-04 `a238896`) surfaced a
+load-bearing finding and a gating factor.
+
+**Finding:** the engine couples E and B *asymmetrically* -- magnetic B is a
+spatial link phase (clean holonomy = exp_04's `{4,4,16}`), but electric E enters
+as an on-site `delta_phi = omega + V(x)` (mass-like), so there is **no electric
+Wilson-loop analog**. The screen measured the same-footing density response:
+magnetic **axis-enhanced**, electric **axis-suppressed** -- *opposite sense* about
+`(1,1,-1)` (suggestive of cancellation, but density is not the photon action).
+
+**Gating factor:** the photon-dispersion *verdict* needs the electric ACTION
+block (the permittivity `epsilon`), which exists in **neither Paper I nor
+Paper II** (Paper II checked 2026-07-09: it only reuses the magnetic `Q` for the
+coupling ratio; no electric block, no covariant `F_mu-nu F^mu-nu`). And there is
+**no symmetry shortcut**: the framework establishes only spatial `O_h`, not the
+Lorentz boosts that would fix `epsilon` from `mu-inverse` (Paper II's own audit
+table: boosts `K_a` are not in the discrete centralizer). So the electric block
+is genuinely new theory work -- deliver via **(a)** Paper I App. B extended to the
+electric sector (a derivation, likely a Paper I revision/appendix), or **(b)** an
+action-level spectral (`Tr ln T`) probe.
+
+**Scope of the gate:** it gates the gauge-sector *verdict* -- (a) any gauge
+prediction/tension claim, (b) P9 as a multi-*observable* concordance, (c) the
+tactical "second falsifiable channel" case -- but does **NOT** gate a Paper IV
+v1.0 deposit (kinematic channel carries falsifiability, `PASS`). Recorded in
+paper-04 `CLAUDE.md` (gating-factor bullet) and
+`notes/exp_03_R4_cancellation_screen_spec.md` §4a/§7.
