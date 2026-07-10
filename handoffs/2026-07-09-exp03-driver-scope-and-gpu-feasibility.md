@@ -6,8 +6,8 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: []                         # decision-request; context commit is 3de7423 (paper-04, already handed off)
 pr: none
-status: open
-state: blocked                      # complete as a finding; the ACTION (write exp_03) is gated on a PM scope call + owner R4 decision
+status: consumed
+state: blocked                      # complete as a finding; the ACTION (write exp_03) is gated on a PM scope call + owner R4 decision. PM dispositions recorded 2026-07-09 (see end).
 semver: n/a (analysis + capacity benchmark; no software change)
 flags:
   - "DRIVER DOES NOT EXIST ANYWHERE: the load-bearing gauge test -- the full E+B photon-dispersion / induced-response birefringence-ORDER sweep (Paper IV `exp_03`, dcl-core design-doc `test #5`) -- is NOT implemented in either repo. dcl-core ships only the MAGNETIC-ONLY cross-check `exp_04` (N=20, the exact {4,4,16} Q-tensor); `tests/test_peierls.py:21-27` explicitly states test #5 is 'GPU/large-N bound and not part of the CPU-first build'. So there is nothing to run yet -- the driver must be authored before any verdict exists."
@@ -17,8 +17,8 @@ flags:
   - "SCHEDULING BASIS CHANGED: the '~5.5 h/axis' cost the plan carried is a CPU-path number. Measured GPU speedup on the real box is 41.5x at 128^3 (E+B hop) -> ~8 min/axis, whole sweep in hours not days. Any planning that used 5.5 h/axis CPU is obsolete. See memory `exp03-gpu-feasibility`."
 decisions:
   - "RECOMMEND: exp_03 driver is Paper IV scope (this repo's experiment) consuming the already-SHIPPED dcl_core v0.3.0 primitives (Peierls hop, uniform_B_potential, vector/temporal potential threading, GPU RawKernel). NO new dcl-core engine capability is strictly required -- the R4 induced-response readout can be composed experiment-side (density/token diffs + small-field fit), as the reference estimator in dcl-core's test_peierls already does. PM to confirm this split rather than commissioning a new dcl-core feature."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-09
 ---
 
 ## Summary
@@ -158,3 +158,33 @@ tactical "second falsifiable channel" case -- but does **NOT** gate a Paper IV
 v1.0 deposit (kinematic channel carries falsifiability, `PASS`). Recorded in
 paper-04 `CLAUDE.md` (gating-factor bullet) and
 `notes/exp_03_R4_cancellation_screen_spec.md` §4a/§7.
+
+## → PM disposition (2026-07-09, user rulings)
+
+Three PM/owner rulings, all decided by the user this session. These **override the
+focused session's recommendations** where they differ — recorded here as the
+authoritative dispositions:
+
+1. **v1.0 GATING — exp_03 DOES gate Paper IV v1.0 (user overrode the "not a blocker"
+   recommendation).** Paper IV v1.0 is **held until the gauge birefringence verdict
+   exists** — which, per the Addendum, now means it waits on the new **Paper VIII**
+   electric-block derivation. The kinematic channel (PASS) remains Paper IV's clean
+   falsifiable result, but the deposit does not go out on it alone. → Paper IV parent
+   board issue #13 marked **blocked-by** the new Paper VIII issue.
+2. **exp_03 SCOPE — R4 becomes a REUSABLE dcl-core engine feature (user overrode the
+   "paper-04-only, no new engine work" recommendation).** The R4 induced-response
+   readout (the E+B cancellation-screen estimator) is to be built as a tested,
+   reusable capability in `dcl_core`, which paper-04's exp_03 driver then consumes.
+   → relayed to a dcl-core session via handoff `2026-07-09-dcl-core-r4-readout-and-docfix`.
+3. **SERIES SLOTTING — assign the number now: the electric-block derivation is
+   Paper VIII.** (Next free identifier: V = Farey, VI = Bell, VII = detectable⇒finite
+   candidate/#22.) New-subproject board issue to be opened; repo to be scaffolded from
+   `dcl-paper-template` (slug pending a one-line user confirm of the title/slug).
+
+**Other consumer actions dispositioned:**
+- Planning cost basis (5.5 h/axis CPU → ~8 min/axis GPU, whole sweep hours): noted;
+  no stale schedule doc in dcl-project used the CPU figure.
+- Cross-doc design-doc-04 fix (stale "test #4 N-limited" + "test #5 deferred"): folded
+  into the same dcl-core handoff `2026-07-09-dcl-core-r4-readout-and-docfix` (action 2).
+- Tactical ledger (gauge second channel gated on Paper VIII; kinematic is the one clean
+  falsifiable result): recorded in memory + the Paper IV board issue.
