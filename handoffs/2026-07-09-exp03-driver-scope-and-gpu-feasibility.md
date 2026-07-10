@@ -113,11 +113,15 @@ engine feature) is defensible but heavier -- PM's call which split we want.
       2026-07-07 gauge-Q-tensor handoff; this reconfirms it is still pending.
 - [ ] **TACTICAL LEDGER -- new gating factor (see Addendum):** record that the
       gauge-sector *verdict* is gated on a NOT-YET-EXISTING electric-sector
-      induced-action derivation (theory work, likely a Paper I App. B revision),
-      absent from both Paper I and Paper II. Weigh this in the Paper III-vs-IV
-      ordering: Paper IV's second (gauge) falsifiable channel is not deliverable
-      without this derivation; the kinematic channel remains its one clean
-      falsifiable result. (Does NOT block a Paper IV v1.0 deposit.)
+      induced-action derivation, **now decided to become its own SEPARATE
+      companion paper** (absent from both Paper I and Paper II; no symmetry
+      shortcut). Weigh this in the Paper III-vs-IV ordering: Paper IV's second
+      (gauge) falsifiable channel is not deliverable without this new paper; the
+      kinematic channel remains its one clean falsifiable result. (Does NOT block
+      a Paper IV v1.0 deposit.)
+- [ ] **Series slotting:** assign the new electric-block-derivation paper a series
+      number and a board issue (repo `discrete-causal-lattice-project`, project 6);
+      scaffold its repo from `dcl-paper-template` when ready.
 
 ## Addendum (2026-07-09): electric-block derivation is a GATING FACTOR
 
@@ -138,9 +142,15 @@ coupling ratio; no electric block, no covariant `F_mu-nu F^mu-nu`). And there is
 **no symmetry shortcut**: the framework establishes only spatial `O_h`, not the
 Lorentz boosts that would fix `epsilon` from `mu-inverse` (Paper II's own audit
 table: boosts `K_a` are not in the discrete centralizer). So the electric block
-is genuinely new theory work -- deliver via **(a)** Paper I App. B extended to the
-electric sector (a derivation, likely a Paper I revision/appendix), or **(b)** an
-action-level spectral (`Tr ln T`) probe.
+is genuinely new theory work.
+
+**DELIVERY DECISION (2026-07-09, user): spin the electric-block derivation into a
+SEPARATE companion paper in the series** -- not a Paper I appendix. Within that
+paper the derivation method is TBD: **(a)** Paper I App. B's approach extended to
+the electric/temporal sector, or **(b)** an action-level spectral (`Tr ln T`)
+probe. **Paper IV's gauge-sector verdict now gates on this new paper** -- i.e. the
+gauge second channel is a whole separate deliverable, not an appendix tweak.
+(Repo not yet scaffolded; PM to slot it in the series numbering / board.)
 
 **Scope of the gate:** it gates the gauge-sector *verdict* -- (a) any gauge
 prediction/tension claim, (b) P9 as a multi-*observable* concordance, (c) the
