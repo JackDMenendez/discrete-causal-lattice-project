@@ -6,7 +6,7 @@ repo: dcl-mathematics
 branch: main
 commits: [1926264, 7ea4410, 051adeb, 41ab08f]
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper repo; the new src/dcl_formalism Lake project is 0.1.0, unreleased)
 flags:
@@ -18,8 +18,8 @@ decisions:
   - "Formalism layer = Lean 4 + Mathlib, co-located in src/dcl_formalism/ (not a separate sympy dcl-formalism repo)."
   - "The d-of-(d+1) offset set and projection are carried as DATA (Orientation / Geometry), not pinned — the open modelling choice stays open."
   - "Dimensional-selection slot count = the d+1 simplex AXES (resolves Open Question 4 on the d+1 side; the 2d+1 topology is the closed-neighbourhood size, not a slot count)."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-16
 ---
 
 ## Summary
