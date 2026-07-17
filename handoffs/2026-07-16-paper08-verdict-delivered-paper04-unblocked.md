@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [fd84dbd, a0f5f9b, 4bc0035, 21112ea, 4d59a4b]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased)
 flags:
@@ -32,8 +32,8 @@ decisions:
      PASS on IV's confirmation; 'vacuum speed isotropy / O_h restoration' -> its own row,
      status per IV's dispersion result. The two are proven decoupled, so this is honest
      decomposition."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-16
 ---
 
 ## Summary
