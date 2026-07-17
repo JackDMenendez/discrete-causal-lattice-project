@@ -30,8 +30,14 @@ flags:
      dcl-paper-04-optical-axis-birefringence. The dcl-website refs (roadmap.json URL +
      v0.3.0 news post) point at the SLUG, which is unchanged, so no site edit is needed;
      if the PM wants the site's displayed TITLE updated, that is a dcl-website edit."
-  - "AFFIRMED ANCHOR kept intact (reviewer independently recomputed): Q_B = adj(P),
-     P = M M^T, doubled transverse Maxwell root. Not weakened."
+  - "AFFIRMED ANCHOR kept intact AND now FEATURED as named theorems (per the amended
+     merge directive's 'Affirmed results -- FEATURE these' section, commit 2d8af44,
+     added after first read): Theorem (adjugate Q_B=adj(P), general hop vectors) +
+     Corollary (the {1,4,4}/{16,4,4} lattice blocks); Theorem (doubled transverse
+     root / no gauge-sector birefringence, with the det(eps) Fresnel factorization);
+     the temporal-plaquette origin of P and the omitted-4th-cube-diagonal geometry are
+     featured as the electric-block origin and the optical-axis anchor. Paper-04
+     commit c299a95; builds clean (18 pp)."
 decisions:
   - "Editorial architecture resolved as MERGE (user, 2026-07-17), executed here. The
      companion-publication track (2026-07-16-paper08-paper04-companion-publication) and
