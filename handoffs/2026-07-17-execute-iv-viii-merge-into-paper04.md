@@ -13,7 +13,7 @@ flags:
   - "SELF-MERGE: the `dcl-paper-04` session performs the merge INTO ITS OWN REPO — VIII is folded into paper-04, which stays the home. Keep the repo SLUG `dcl-paper-04-optical-axis-birefringence`; change only the PAPER (document) title. (There is no `dcl-paper-05` repo/dir anywhere — an earlier routing to a 'Paper 05' session was corrected to paper-04 per user, 2026-07-17.)"
   - "MERGE DECISION (user, 2026-07-17): merge Papers IV and VIII into ONE paper, homed in the EXISTING `dcl-paper-04` repo (reuse, do not create a new repo — nothing is published/DOI'd, and the live site already links paper-04). Title may change; the repo SLUG stays `dcl-paper-04-optical-axis-birefringence` (the optical axis remains the conceptual spine; the slug is just a handle). If the slug is ever renamed, update the two dcl-website references (assets/roadmap.json URL + news/posts/2026-07-08-dcl-core-v0-3-0.qmd)."
   - "PRESERVE HISTORY: bring Paper VIII's content into paper-04 via `git subtree add` (or read-tree), NOT a plain file copy, so the provenance of VIII's sympy-verified derivation survives (project discipline: derivation papers carry their sympy verification). Then ARCHIVE `dcl-paper-08` read-only with a tombstone README pointing to paper-04 — do NOT delete (its history lives on in paper-04 via subtree; the site never linked it, so nothing breaks)."
-  - "REVIEWER VERDICTS the merge must resolve: VIII = MAJOR REVISION (the 'induced action / exact permittivity' claim exceeds the derivation); IV = WORKING DRAFT (mislabels directional dispersion anisotropy as 'birefringence'; treats a NON-UNITARY transfer-matrix eigenphase as a group velocity without proof). The core algebraic result — `Q_B = adj(P)`, `P = M Mᵀ`, doubled transverse Maxwell root — is AFFIRMED; keep it, don't weaken it."
+  - "REVIEWER VERDICTS the merge must resolve: VIII = MAJOR REVISION (the 'induced action / exact permittivity' claim exceeds the derivation); IV = WORKING DRAFT (mislabels directional dispersion anisotropy as 'birefringence'; treats a NON-UNITARY transfer-matrix eigenphase as a group velocity without proof). The core algebraic result — `Q_B = adj(P)`, `P = M Mᵀ`, doubled transverse Maxwell root — is AFFIRMED and should be FEATURED as headline theorems (see 'Affirmed results — FEATURE these'), not merely preserved; the corrections reframe the *claims* around them, not the theorems."
   - "TERMINOLOGY (correctness): reserve 'birefringence' for the GAUGE-sector result (two transverse Maxwell roots). The IV kinematic Section 2 is uniaxial DIRECTIONAL DISPERSION ANISOTROPY (compares k-directions), not a fixed-k polarization split."
   - "INDUCED-ACTION OVERCLAIM (VIII): `δφ = ω + V` from one HopOperator.step validates the VERTEX, not the quadratic effective action Γ⁽²⁾; D_3d symmetry permits two free coefficients and does NOT force the ε ratio 1:4. Downgrade to 'geometric candidate' unless the ∂²Γ/∂E∂E derivation is supplied."
   - "EXACT ADJUGATE FAILS O_h AVERAGING: adj(3I)=9I ≠ 8I → use the PROPORTIONAL closure μ⁻¹ = γ·adj(ε). General Fresnel prefactor is det(ε), NOT 16 (VIII p.8)."
@@ -51,6 +51,29 @@ objections and fold VIII's electric block into the unified Paper IV.
 5. **Series bookkeeping:** VIII's number is retired/absorbed into IV. Board:
    close #23 (repo `discrete-causal-lattice-project`, project 6) as "merged into
    Paper IV (#13)"; #13 becomes the merged paper's tracking issue.
+
+## Affirmed results — FEATURE these prominently (the critic's highlighted contributions)
+The reviewer did not only correct; they flagged genuine results the merged paper
+should **foreground as headline contributions**, not bury. Give each a clear
+theorem/proposition environment and state its generality:
+1. **The adjugate theorem `Q_B = adj(P)`** with `P = M Mᵀ` (Gram matrix of the
+   three hop vectors) and `Q_B` the Gram matrix of their pairwise cross products.
+   The reviewer calls this "the best contribution" — compact, **general**, and
+   NOT peculiar to the numerical lattice values. State it as a named theorem with
+   its general (hop-vector) form, with the `{1,4,4}`/`{16,4,4}` lattice case as a
+   corollary.
+2. **The doubled transverse Maxwell root / non-birefringent closure** — "a
+   genuine theorem, not merely a numerical observation": both transverse
+   polarizations share dispersion even though the common speed is direction-
+   dependent. Present as a theorem with the Fresnel-determinant factorization
+   `det(...) = det(ε) ω² (ω² − kᵀεk)²`.
+3. **The omitted-fourth-cube-diagonal geometry** — the reviewer calls the
+   geometric explanation of the special (optical) direction "clear and
+   memorable." Keep it as the intuitive anchor for the optical axis.
+4. **The temporal-plaquette construction** `Θ_a = A_0(x) − A_0(x+V_a) = V_a·E`,
+   hence `P = Σ_a V_a V_aᵀ` — "geometrically well motivated." Feature it as the
+   structural origin of the electric block (with the induced-action *claim* about
+   it downgraded per the corrections below).
 
 ## Corrections the merged paper must resolve
 
@@ -108,8 +131,13 @@ objections and fold VIII's electric block into the unified Paper IV.
 ## → Consumer actions (executing session)
 - [ ] Merge per the mandate above (reuse paper-04, subtree-in VIII, archive
       paper-08, retitle document, keep slug).
-- [ ] Resolve every correction in the two lists above; keep the affirmed
-      adjugate theorem `Q_B = adj(P)` and doubled transverse root intact.
+- [ ] **Feature the four affirmed results** (section "Affirmed results — FEATURE
+      these") as named theorems/propositions with their general forms — the
+      adjugate theorem `Q_B = adj(P)`, the doubled-root non-birefringent closure,
+      the fourth-cube-diagonal geometry, and the temporal-plaquette origin of P.
+- [ ] Resolve every correction in the two lists above WITHOUT weakening those
+      affirmed results (the corrections retitle/reframe the *claims* around them,
+      not the theorems themselves).
 - [ ] Board: close #23 as merged-into-#13; update #13 title/scope for the merged
       paper.
 - [ ] When done, write a handoff back to PM (merge complete, board state, any
