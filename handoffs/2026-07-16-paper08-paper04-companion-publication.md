@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [fd84dbd, a0f5f9b, 4bc0035, 21112ea, 4d59a4b]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased; companion release with Paper IV planned)
 flags:
@@ -37,8 +37,8 @@ decisions:
      / O_h restoration' -> its own row, status set by what IV's large-N dispersion shows.
      Justified because the two are proven decoupled -- this is honest decomposition, not
      status-gaming."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-16
 ---
 
 ## Summary
