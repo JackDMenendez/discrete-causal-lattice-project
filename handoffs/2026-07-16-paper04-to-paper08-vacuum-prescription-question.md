@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [987ee7b, 842efbe, c10f138]
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper repo; experiment scaffolding + a blocking theory question to VIII)
 flags:
@@ -40,8 +40,8 @@ decisions:
      vacuum-speed anisotropy (single-domain factor-~2 vs O_h-restored). This is
      the non-duplicative content VIII's own caveats defer to IV. Recorded in
      paper-04 notes/exp_03_dynamical_confirmation_plan.md."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-08 (focused)
+consumed_at: 2026-07-16
 ---
 
 ## Summary
