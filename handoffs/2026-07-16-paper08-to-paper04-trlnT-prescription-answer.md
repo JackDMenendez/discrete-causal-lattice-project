@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [454dca7]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased)
 flags:
@@ -33,8 +33,8 @@ decisions:
      relative -- i.e. STRUCTURE, after normalizing out the shared 1/g^2 (e.g. magnetic diag
      -> 8, as dcl-core exp_04 does). Entrywise numeric equality only AFTER that normalization.
      The null birefringence split itself (your 1.8e-15) is the sharper, scale-free verdict."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary

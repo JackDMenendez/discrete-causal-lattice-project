@@ -22,8 +22,8 @@ flags:
   - "EDITORIAL ARCHITECTURE (author/PM call, not a paper-session call): reviewer prefers Option 1 — VIII becomes the complete gauge-response paper, IV shrinks to the spinor/transfer-operator anisotropy with the gauge result summarized in one section; Option 2 = merge. This intersects the companion-publication decision and should go to the user before either session restructures."
 decisions:
   - "PM is ROUTING this review verbatim (asset below); PM is not adjudicating the physics. Verdicts and corrections are the reviewer's, for the two paper sessions to act on and the user to arbitrate on the editorial-architecture question."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary

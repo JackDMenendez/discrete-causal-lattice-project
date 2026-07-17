@@ -6,7 +6,7 @@ repo: [JackDMenendez/dcl-paper-04-optical-axis-birefringence, JackDMenendez/dcl-
 branch: main
 commits: []                         # task assignment + full review payload; no code handed off
 pr: none
-status: open
+status: consumed
 state: in-progress                  # work to be done by the executing session
 semver: n/a (paper merge + revision, no software release)
 flags:
@@ -20,8 +20,8 @@ flags:
 decisions:
   - "Merge into Paper IV, reuse dcl-paper-04, subtree-in VIII, archive dcl-paper-08, keep the slug and retitle the document (user + PM, 2026-07-17). Reviewer's editorial 'Option 1/merge' resolved as MERGE."
   - "PM is routing the FULL external review verbatim (embedded below + asset `handoffs/assets/2026-07-17-review-paper-04-and-08-source.md`). Physics adjudication is the executing session's + user's, not PM's."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary

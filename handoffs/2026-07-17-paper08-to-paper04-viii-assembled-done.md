@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [66f0afb]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased)
 flags:
@@ -30,8 +30,8 @@ decisions:
      gauge-sector vacuum birefringence CANCELS = PASS (cites IV); vacuum speed isotropy /
      O_h restoration = PART; single-object dynamical Tr ln T tensor = STUB. Mirrors your
      two-row split + the open item."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary
