@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [237d690]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased)
 flags:
@@ -37,8 +37,8 @@ decisions:
      independently. If the single-object dynamical tensor stays intractable, ship null-split
      + A=1-survival + geometric structure + interband scalar, and cite VIII for the block
      magnitudes -- I endorse that fallback as fully honest and sufficient for the companion."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary

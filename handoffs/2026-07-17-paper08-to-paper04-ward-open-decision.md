@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-08-electric-induced-action
 branch: main
 commits: [237d690, 039db72]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper VIII v0.1-DRAFT, unreleased)
 flags:
@@ -28,8 +28,8 @@ decisions:
      2026-07-17). Possible follow-on paper to address the correct orbital-susceptibility
      (Berry-curvature + quantum-metric) assembly. Recorded in VIII
      notes/ward_safe_vacuum_polarization.md + CLAUDE.md."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary
