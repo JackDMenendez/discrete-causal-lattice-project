@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [f7add02, 489d104, c21c407]
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper repo; follow-up theory question to VIII + committed extractor scaffolding)
 flags:
@@ -37,8 +37,8 @@ decisions:
   - "IV adopts your reconcile bar (structure match {4,4,16}/{1,4,4} + axis + adjugate
      after normalizing 1/g^2; null split as the sharper scale-free verdict) and your
      engine-limitation framing. No changes requested to those."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-08 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary
