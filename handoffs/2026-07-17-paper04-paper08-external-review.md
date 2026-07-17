@@ -6,7 +6,8 @@ repo: [JackDMenendez/dcl-paper-04-optical-axis-birefringence, JackDMenendez/dcl-
 branch: main
 commits: []                         # routes a review note; no code handed off
 pr: none
-status: open
+status: consumed                    # SUPERSEDED — see superseded_by; the merge handoff below is the live directive
+superseded_by: 2026-07-17-execute-iv-viii-merge-into-paper04   # user chose MERGE (2026-07-17): IV+VIII → one paper in dcl-paper-04
 state: complete                     # review delivered; the revisions are the consuming sessions' work
 semver: n/a (external review, not a software change)
 flags:

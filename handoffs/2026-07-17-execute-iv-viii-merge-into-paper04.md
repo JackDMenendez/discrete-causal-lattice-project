@@ -1,7 +1,7 @@
 ---
 handoff: 2026-07-17-execute-iv-viii-merge-into-paper04
 from: PM (dcl-website session)
-to: dcl-paper-05 / Paper V (Farey) session (focused)   # per user direction 2026-07-17: the "Paper 05" window executes this
+to: dcl-paper-04 (focused)   # per user direction 2026-07-17: the paper-04 session merges VIII into its own repo
 repo: [JackDMenendez/dcl-paper-04-optical-axis-birefringence, JackDMenendez/dcl-paper-08-electric-induced-action]
 branch: main
 commits: []                         # task assignment + full review payload; no code handed off
@@ -10,7 +10,7 @@ status: open
 state: in-progress                  # work to be done by the executing session
 semver: n/a (paper merge + revision, no software release)
 flags:
-  - "EXECUTOR ≠ TARGET REPO: the user is having the 'Paper 05' session do the work, but the DELIVERABLE is Paper IV — all merge output goes into `dcl-paper-04-optical-axis-birefringence`. Do NOT create the merged paper inside a Paper V repo. (PM note: no `dcl-paper-05` repo exists on GitHub as of 2026-07-17; confirm the executing session's location with the user if unclear.)"
+  - "SELF-MERGE: the `dcl-paper-04` session performs the merge INTO ITS OWN REPO — VIII is folded into paper-04, which stays the home. Keep the repo SLUG `dcl-paper-04-optical-axis-birefringence`; change only the PAPER (document) title. (There is no `dcl-paper-05` repo/dir anywhere — an earlier routing to a 'Paper 05' session was corrected to paper-04 per user, 2026-07-17.)"
   - "MERGE DECISION (user, 2026-07-17): merge Papers IV and VIII into ONE paper, homed in the EXISTING `dcl-paper-04` repo (reuse, do not create a new repo — nothing is published/DOI'd, and the live site already links paper-04). Title may change; the repo SLUG stays `dcl-paper-04-optical-axis-birefringence` (the optical axis remains the conceptual spine; the slug is just a handle). If the slug is ever renamed, update the two dcl-website references (assets/roadmap.json URL + news/posts/2026-07-08-dcl-core-v0-3-0.qmd)."
   - "PRESERVE HISTORY: bring Paper VIII's content into paper-04 via `git subtree add` (or read-tree), NOT a plain file copy, so the provenance of VIII's sympy-verified derivation survives (project discipline: derivation papers carry their sympy verification). Then ARCHIVE `dcl-paper-08` read-only with a tombstone README pointing to paper-04 — do NOT delete (its history lives on in paper-04 via subtree; the site never linked it, so nothing breaks)."
   - "REVIEWER VERDICTS the merge must resolve: VIII = MAJOR REVISION (the 'induced action / exact permittivity' claim exceeds the derivation); IV = WORKING DRAFT (mislabels directional dispersion anisotropy as 'birefringence'; treats a NON-UNITARY transfer-matrix eigenphase as a group velocity without proof). The core algebraic result — `Q_B = adj(P)`, `P = M Mᵀ`, doubled transverse Maxwell root — is AFFIRMED; keep it, don't weaken it."
@@ -26,8 +26,8 @@ consumed_at:
 
 ## Summary
 Per the user (2026-07-17), Papers IV and VIII are being **merged into a single
-paper homed in the existing `dcl-paper-04` repo**, and the "Paper 05" Claude
-session is executing the work. This handoff carries (1) the **full external
+paper homed in the existing `dcl-paper-04` repo**, with the `dcl-paper-04`
+session performing the merge into its own repo. This handoff carries (1) the **full external
 review** of both papers verbatim, and (2) the **merge mandate + safe mechanics**
 so the merge preserves history and resolves the review. The core algebraic
 result is sound and stays; the merge's job is to fix the framing/terminology
@@ -36,7 +36,8 @@ objections and fold VIII's electric block into the unified Paper IV.
 ## The merge mandate (do this)
 1. **Home = existing `dcl-paper-04-optical-axis-birefringence`.** Reuse it; do
    NOT create a new repo (nothing is released/DOI'd; the live site already links
-   paper-04). Deliverable is Paper IV even though a Paper-V session executes.
+   paper-04). The paper-04 session merges VIII into its own repo; keep the slug,
+   change only the document title.
 2. **Fold VIII in with history:** `git subtree add --prefix=<path> \
    https://github.com/JackDMenendez/dcl-paper-08-electric-induced-action main`
    (or read-tree), so VIII's sympy-verified derivation keeps its provenance.
