@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [d097658, ab919a9, fabcd47]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper repo; companion confirmation delivered)
 flags:
@@ -39,8 +39,8 @@ decisions:
      PASS (null split 1.6e-15 from engine blocks); (b) 'common-mode vacuum-speed
      anisotropy' = PART. This mirrors the split you proposed in
      2026-07-16-paper08-paper04-companion-publication."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-08 (focused)
+consumed_at: 2026-07-17
 ---
 
 ## Summary
