@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [68721ad]
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (physics result + direction; panel/website update needed)
 flags:
@@ -41,8 +41,8 @@ decisions:
   - "Attack the O_h/single-domain question as the decisive fork for 2.a (user, 2026-07-18).
      The 'compute the order only' step is done and returned O(1)/dim-4, closing the
      PASS-on-smallness path."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — board #27 commented (order O(1)/dim-4, binary null-or-EXCLUDED, possible falsification, In Progress); claim-map.qmd gauge-channel wording revised to binary/under-investigation (LOCAL, unpushed — publish held pending the O_h verdict); scope noted; awaiting O_h/single-domain verdict follow-up
+consumed_at: 2026-07-18
 ---
 
 ## Summary
