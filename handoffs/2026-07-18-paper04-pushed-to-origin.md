@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [4e8da51]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper content push)
 flags:
@@ -20,8 +20,8 @@ flags:
      do-both-decision (do both 2.a+2.b) and the 'null-birefringence is a PASSED falsifiable
      prediction' rebuttal have NOT yet been folded in. Those edits will be a separate push."
 decisions: []
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — noted origin/main current through 4e8da51; falsifiability revision (do-both + rebuttal) still pending in paper-04, awaiting user go
+consumed_at: 2026-07-18
 ---
 
 ## Summary

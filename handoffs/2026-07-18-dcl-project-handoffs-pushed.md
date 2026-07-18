@@ -6,7 +6,7 @@ repo: discrete-causal-lattice-project
 branch: main
 commits: []
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (handoff-tracking push)
 flags:
@@ -19,8 +19,8 @@ flags:
      section revision back to this session. They are pushed/visible but the edits are not
      yet done -- that is the next unit of work if the user wants it."
 decisions: []
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — noted dcl-project origin current; falsifiability decisions visible but not yet executed in paper-04
+consumed_at: 2026-07-18
 ---
 
 ## Summary

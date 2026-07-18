@@ -6,7 +6,7 @@ repo: dcl-paper-08-electric-induced-action
 branch: main
 commits: [dc54624]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (tombstone push)
 flags:
@@ -18,8 +18,8 @@ flags:
      dcl-paper-08-electric-induced-action to make it read-only. That is an owner-only
      GitHub setting; the tombstone commit is pushed and ready."
 decisions: []
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — flipped the GitHub 'Archive repository' toggle; dcl-paper-08 isArchived=true
+consumed_at: 2026-07-18
 ---
 
 ## Summary
