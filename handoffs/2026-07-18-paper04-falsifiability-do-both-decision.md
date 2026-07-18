@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: []                         # routes the author's falsifiability decision; no code handed off
 pr: none
-status: open
+status: consumed
 state: in-progress                  # the paper-04 session executes this
 semver: n/a (falsifiability scoping decision + follow-on)
 flags:
@@ -17,8 +17,8 @@ flags:
 decisions:
   - "Do both channels; 2.b concrete-in-paper, 2.a contingent follow-on; reconcile the series falsifiability map to a multi-channel table (subsumes option c). Author call 2026-07-18, PM-relayed."
   - "Submission-readiness gap (from 2026-07-17-paper04-merge-complete) is thereby resolved as: SHIP the review-revised working draft with honest caveats + the multi-channel map NOW; pursue the 2.a derivations (Γ⁽²⁾, O_h restoration) as tracked follow-on rather than blocking this paper on them."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-18
 ---
 
 ## Summary

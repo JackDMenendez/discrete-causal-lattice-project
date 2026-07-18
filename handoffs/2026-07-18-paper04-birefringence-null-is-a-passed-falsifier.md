@@ -6,7 +6,7 @@ repo: JackDMenendez/dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: []                         # framing/rebuttal for the falsifiability section; no code
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper framing)
 addendum_to: 2026-07-18-paper04-falsifiability-do-both-decision
@@ -17,8 +17,8 @@ flags:
   - "HONESTY GUARDRAILS (state both, so the point can't be re-inverted): (a) RETROSPECTIVELY the null is a passed falsifiable prediction (strong, because rivals fail it); (b) PROSPECTIVELY further birefringence non-detection no longer DISCRIMINATES the DCL from standard physics — hence the forward frontier is the dispersion channels, not birefringence. And the cancellation is a theorem CONDITIONAL on the constitutive blocks (their dynamical derivation is the open 2.a item) — corroborated-and-conditional, not more."
 decisions:
   - "Author instruction (2026-07-18): incorporate this rebuttal as framing in the merged paper's falsifiability section. PM-relayed; the physics wording/placement is the session's + author's."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-04 (focused)
+consumed_at: 2026-07-18
 ---
 
 ## Summary
