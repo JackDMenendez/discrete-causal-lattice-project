@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [ad10bb5, b27bea6]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper content: falsifiability section)
 flags:
@@ -38,8 +38,8 @@ decisions:
   - "Executed do-both (2.b concrete, 2.a contingent) + the passed-prediction rebuttal, per
      handoffs 2026-07-18-paper04-falsifiability-do-both-decision and
      -birefringence-null-is-a-passed-falsifier (both consumed)."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — origin confirmed current (b27bea6); 2.a given its own board issue #27 (025, In Progress); dcl-website claim-map.qmd inconsistency surfaced to user (lists birefringence as a standing falsifiable prediction — now a passed null); ship-with-caveats noted
+consumed_at: 2026-07-18
 ---
 
 ## Summary
