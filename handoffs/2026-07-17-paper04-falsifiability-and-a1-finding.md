@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [4018225]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper content: falsifiability framing + a derived physics result)
 flags:
@@ -51,8 +51,8 @@ decisions:
      waiting for the photon-dispersion resolution, on the user's instruction (2026-07-17).
      The bold 'frontier-testable photon falsifier' framing is NOT asserted -- it is named
      as the open item, because the A=1 finding points away from it, not toward it."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — decision routed as "do both 2.a+2.b" in 2026-07-18-paper04-falsifiability-do-both-decision; finding recorded to memory [[paper04-falsifiability-photon-finding]]
+consumed_at: 2026-07-18
 ---
 
 ## Summary

@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [54d1d1c, bdc7bf3, 0a8592f, b6d2e3c, e466ba3]
 pr: none
-status: open
+status: consumed
 state: complete
 semver: n/a (paper merge + review revision; no software release)
 flags:
@@ -43,8 +43,8 @@ decisions:
      companion-publication track (2026-07-16-paper08-paper04-companion-publication) and
      the separate-review routing (2026-07-17-paper04-paper08-external-review) are
      superseded/consumed."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — board verified (#23 closed / #13 retitled); merge status + falsifiability recorded to memory; push + archive + submission-readiness folded into 2026-07-18-paper04-falsifiability-do-both-decision
+consumed_at: 2026-07-18
 ---
 
 ## Summary
