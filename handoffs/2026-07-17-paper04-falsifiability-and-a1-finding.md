@@ -34,6 +34,16 @@ flags:
      (order unity) and O_h-restoration-dependent. So the clean 'kinematic dim-6 photon
      falsifier' the series leaned on needs re-examination -- it is NOT delivered as
      previously stated. This is a real result, not a presentation choice."
+  - "NUANCE (claim-auditor-corrected): omega=0 has NO energy DISPERSION, but it is NOT
+     featureless. The eigenvalue-MAGNITUDE anisotropy |H~|^2=1-(4/3)|k_perp|^2 is a real,
+     omega-INDEPENDENT observable -- the anisotropic spreading exp_01 measures -- because
+     the A=1 rule renormalizes the TOTAL norm of a state, not each k-mode, so it does not
+     flatten the relative magnitudes across a wavepacket. So the massless channel carries a
+     genuine magnitude/filtering anisotropy (distinct from a speed/energy dispersion). For
+     falsifiability option (b), THIS is the real massless observational handle -- an
+     amplitude/attenuation anisotropy, not an SME dim-6 dispersion -- and its testability is
+     its own question. (Do not restate the earlier draft's wrong claim that renormalization
+     'flattens' it.)"
   - "AFFIRMED ALGEBRA UNAFFECTED: the adjugate theorem Q_B=adj(P) and the doubled-root
      birefringence cancellation stand independently of the falsifiability question."
 decisions:
