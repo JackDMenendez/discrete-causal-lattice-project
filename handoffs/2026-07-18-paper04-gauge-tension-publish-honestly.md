@@ -6,7 +6,7 @@ repo: dcl-paper-04-optical-axis-birefringence
 branch: main
 commits: [28564c2]
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper content: gauge-sector tension stated honestly; panel/website update)
 flags:
@@ -39,8 +39,8 @@ decisions:
   - "Publish Paper IV with the gauge-sector tension honestly stated, root cause and structural
      resolution direction included, cleanly scoped (author, 2026-07-18). Submission-readiness:
      this completes the honest account; the resolution is tracked follow-on, not a blocker."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session) — superseded by the v1.0-published handoff; gauge tension characterized (O(1)/dim-4, excluded as single domain, root=V_4 omission, O_h-restoring escape) → board #27; scope honored in claim-map; foundational-paper idea flagged for user/roadmap
+consumed_at: 2026-07-18
 ---
 
 ## Summary
