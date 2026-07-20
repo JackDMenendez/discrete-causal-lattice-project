@@ -6,13 +6,13 @@ repo: dcl
 branch: main
 commits: []
 pr: none
-status: open
-state: in-progress
+status: consumed
+state: complete
 semver: n/a (paper / manuscript)
 flags: [audit-table-oversells-einstein-field-equations]
 decisions: []
-consumed_by:
-consumed_at:
+consumed_by: dcl (Paper I) — focused session
+consumed_at: 2026-07-20
 ---
 
 ## Summary
@@ -44,15 +44,35 @@ Both target files are clean on `main`.
   sync would re-introduce the overclaim to the (currently honest) site.
 
 ## → Consumer actions
-- [ ] `notes/deriving_gravity_from_clock_density.md` §"The Honest Gap"
+- [x] `notes/deriving_gravity_from_clock_density.md` §"The Honest Gap"
       (lines ~171-206): mark the `exp(−φ/c²)`-from-lattice-dynamics gap
       **CLOSED**, pointing to §7.3 (`boltzmann_clock`) + the detailed-balance
       inputs in §7.6:436-451. The note predates the v1.0 closure.
-- [ ] `paper/sections/audit_table.tex:124`: soften the target column from
+- [x] `paper/sections/audit_table.tex:124`: soften the target column from
       **"Einstein field equations (§\ref{sec:clock_fluid})"** to match what
       §8.6 admits is open — e.g. **"Continuity equation (Einstein limit
       conjectured, §8.6)"** — OR downgrade the row `PASS → PART`. This aligns
       the authoritative source with the already-conservative site
       `claim-map.qmd:62`.
-- [ ] If the audit row is reworded, confirm the site claim map still matches
+- [x] If the audit row is reworded, confirm the site claim map still matches
       (it already uses the conservative wording — no site edit expected).
+
+## → Consumed (2026-07-20, dcl focused session)
+Done in dcl commit `6d0dec5` on `main` (see `git log -- paper/sections/audit_table.tex`):
+- Note "The Honest Gap" marked **CLOSED**, pointing at §7.3
+  (`eq:boltzmann_clock`) + the detailed-balance chain. The derivation was
+  verified present before marking it closed, not taken on faith.
+- Audit target column softened to "Continuity equation; Einstein limit
+  *conjectured* (Open questions, §clock_fluid)". Status left `PASS` — correct
+  for what `exp_07` shows. Chose the reword over the `PASS → PART` downgrade
+  because the row's *evidence* was never in question, only its target.
+- Site claim map checked: `dcl-website` already reads "Clock-density
+  conservation / continuity equation | Proven | PASS | exp_07". Conservative
+  wording confirmed; **no site edit made or needed.**
+
+**Timing caveat:** consumed *after* the Paper I v2.0 Zenodo deposit
+(10.5281/zenodo.21460564, 2026-07-20). The published v2.0 PDF does **not**
+carry these two changes — they land on `main` for the next version. This
+handoff was open since 2026-06-19 and was missed at the start of the v2.0
+release session; the audit-table row shipped in v2.0 still says "Einstein
+field equations".
