@@ -79,9 +79,20 @@ three-diagonal construction):
 | A=1 conservation principle | **Unresolved, not falsified** | Failure traces to the hop-set realization (V_4 omission), not A=1 |
 
 ## → Consumer actions
-- [ ] **Paper I session:** prepare the v2.0 revision (notice before/after abstract,
+- [x] **Paper I session:** prepare the v2.0 revision (notice before/after abstract,
       changes table, bib citing concept DOI 10.5281/zenodo.21435951). The author
       cuts the Zenodo *New version* + the metadata notice on prior records.
+      **DONE 2026-07-20** — commit `eef75e3`, tag `v2.0`, GitHub Release cut.
+      Notice + changes table placed **immediately before the abstract** (author's
+      instruction in the 07-20 addendum). **DOI deviation, author-approved
+      2026-07-20:** the notice and bib print the **VERSION** DOI
+      `10.5281/zenodo.21435952`, not the concept DOI this handoff's flag
+      specified — the author chose version to pin the exact deposit carrying the
+      falsifying result. Also folded in the never-deposited v1.03 erratum, and
+      added an audit-table row "Single-domain gauge viability → FAIL".
+      **Remaining and author-only: the Zenodo *New version* deposit itself** plus
+      the superseded-metadata notices on prior records (checklist in
+      `release_notes/v2.0.md`).
 - [ ] **Paper II session — HOLD** until the paper-04 O_h-average-root handoff lands;
       then prepare v1.1/v2.0 per its verdict.
 - [ ] Both: preserve prior PDFs; add the metadata status notice to every old Zenodo

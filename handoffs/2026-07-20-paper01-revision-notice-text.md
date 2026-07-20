@@ -6,7 +6,7 @@ repo: JackDMenendez/discrete-causal-lattice
 branch: main
 commits: []                         # exact author-approved revision-notice text; no code handed off
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: n/a (paper revision content)
 addendum_to: 2026-07-18-papers-i-ii-zenodo-reversion-procedure
@@ -16,8 +16,8 @@ flags:
   - "BOTH SECTORS covered: the changes table now includes the gauge O(1) failure AND the MATTER-sector row (author-confirmed 2026-07-20). Matter is also excluded-as-constructed — the 'matter dim-6-safe' reading was RETRACTED (referee M1/M2, verified exp_05)."
 decisions:
   - "Author (2026-07-20): place this exact revision notice + changes table immediately before Paper I's abstract as part of the v2.0 re-version (per the 2026-07-18 procedure handoff)."
-consumed_by:
-consumed_at:
+consumed_by: dcl (Paper I) — focused session
+consumed_at: 2026-07-20
 ---
 
 ## Summary
