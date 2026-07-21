@@ -6,8 +6,8 @@ repo: JackDMenendez/dcl-paper-02-sm-derivation
 branch: main
 commits: []                         # exact author-approved revision-notice text; no code handed off
 pr: none
-status: open
-state: in-progress
+status: consumed
+state: complete
 semver: n/a (paper revision content)
 addendum_to: 2026-07-18-papers-i-ii-zenodo-reversion-procedure
 flags:
@@ -17,8 +17,8 @@ flags:
   - "TABLE ROWS: this is the shared changes table (same as Paper I) WITH the matter row (author-confirmed 2026-07-20). Some rows originate in Paper I / Paper IV (e.g. adjugate closure); the Paper II session should keep each row mapped to an actual Paper II claim, trimming/annotating any that do not apply to Paper II specifically."
 decisions:
   - "Author (2026-07-20): place this exact revision notice immediately before Paper II's abstract, with the shared changes table (incl. matter row) on its own page, as part of the Paper II re-version (per the 2026-07-18 procedure handoff)."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-02-sm-derivation (focused)
+consumed_at: 2026-07-21
 ---
 
 ## Summary
@@ -48,12 +48,34 @@ handoff — prepare now, cut the Zenodo version after it lands.
 | A=1 conservation principle | Unresolved, not falsified by this result | Failure traces to hop-set realization |
 
 ## → Consumer actions (Paper II session)
-- [ ] Insert the revision notice verbatim immediately before the abstract; place the
+- [x] Insert the revision notice verbatim immediately before the abstract; place the
       changes table on its own following page.
-- [ ] Keep each table row mapped to an actual Paper II claim; annotate/trim rows that
+      **DONE 2026-07-21** — `paper/sections/revision_notice_v2.tex`, input from
+      `main.tex` before `\begin{abstract}`. Text reproduced **verbatim**; the
+      author reconfirmed on 2026-07-21 that it stays verbatim and points the
+      reader to Paper IV. Notice p1, changes table p2, abstract p3 (verified in
+      the built PDF).
+- [x] Keep each table row mapped to an actual Paper II claim; annotate/trim rows that
       are Paper-I/IV-specific.
-- [ ] HOLD the Zenodo re-version cut until the paper-04 O_h-average-root handoff lands
+      **DONE 2026-07-21** — rows 1–2 annotated as inherited from Paper I / a
+      Paper I+IV claim. The shared table's *adjugate closure and null
+      birefringence* row was **dropped** (Paper II makes no such claim) and
+      **replaced** with a Paper-II-specific row on the non-abelian
+      bipartite-plaquette birefringence corollary (the Q-tensor `{4,4,16}`
+      inherited from Paper I). A sixth row, *Substrate geometry of the
+      derivation → Superseded*, was added at the author's direction.
+      Independently confirmed by the repo's `claim-auditor` agent.
+- [x] HOLD the Zenodo re-version cut until the paper-04 O_h-average-root handoff lands
       and the author confirms v1.1 vs v2.0.
-- [ ] On cut: new Zenodo version, metadata notice on the prior record, preserve the
+      **NOT SATISFIED AS WRITTEN — author override, 2026-07-21.** The
+      O_h-average-root handoff was never filed. The author elected **v2.0**
+      directly and supplied the pre-reserved DOI, on the stated grounds that
+      the derivation is obsolete because the architecture leaves an optical
+      axis that is observable but not observed. See
+      `2026-07-21-paper02-v2.0-published` flags.
+- [x] On cut: new Zenodo version, metadata notice on the prior record, preserve the
       original PDF (per `2026-07-18-papers-i-ii-zenodo-reversion-procedure`); hand
       back to PM with the new version DOI.
+      **DONE 2026-07-21 (author, via Zenodo UI)** — v2.0 published at
+      **10.5281/zenodo.21477781**; prior-version metadata notice applied.
+      Handed back to PM as `2026-07-21-paper02-v2.0-published`.

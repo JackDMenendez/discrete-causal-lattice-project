@@ -6,8 +6,8 @@ repo: [JackDMenendez/discrete-causal-lattice, JackDMenendez/dcl-paper-02-sm-deri
 branch: main
 commits: []                         # procedure/protocol; no code handed off
 pr: none
-status: open
-state: in-progress
+status: consumed
+state: complete
 semver: n/a (publication-workflow procedure)
 flags:
   - "VERSION, DO NOT SILENTLY REPLACE. Paper IV v1.0's single-domain no-go is a substantive scientific correction to Papers I & II. Zenodo best practice: create a NEW VERSION of each record (own DOI, chain preserved), NOT a file swap under the same DOI and NOT a fresh unrelated upload. Preserve the earlier PDFs unchanged; do NOT withdraw/delete the originals (they document the reasoning that led to the falsifying result)."
@@ -17,8 +17,8 @@ flags:
   - "SCOPE / WHAT SURVIVES: A=1 conservation is NOT falsified (failure traces to the hop-set realization); the adjugate theorem + null birefringence are RETAINED, conditional on the blocks; Bell + other program results untouched. Qualify only the claims that require the single-domain three-diagonal vacuum's phenomenological viability."
 decisions:
   - "Author's stated next step: publish new versions of Papers I & II citing Paper IV. This handoff carries the accepted Zenodo re-version procedure (author-provided advice, PM-relayed + DCL-reconciled). Version-number choice is the author's; Paper II's is gated on the O_h-root handoff."
-consumed_by:
-consumed_at:
+consumed_by: dcl-paper-02-sm-derivation (focused) — Paper II half
+consumed_at: 2026-07-21
 ---
 
 ## Summary
@@ -93,9 +93,25 @@ three-diagonal construction):
       **Remaining and author-only: the Zenodo *New version* deposit itself** plus
       the superseded-metadata notices on prior records (checklist in
       `release_notes/v2.0.md`).
-- [ ] **Paper II session — HOLD** until the paper-04 O_h-average-root handoff lands;
+- [x] **Paper II session — HOLD** until the paper-04 O_h-average-root handoff lands;
       then prepare v1.1/v2.0 per its verdict.
-- [ ] Both: preserve prior PDFs; add the metadata status notice to every old Zenodo
+      **DONE 2026-07-21 — but the GATE WAS NOT SATISFIED AS WRITTEN.** The
+      paper-04 O_h-average-root handoff was **never filed** (still absent from
+      `handoffs/` as of this date; `2026-07-18-paper04-2a-order-result-oh-decision`
+      is a different, already-consumed paper-04→PM handoff). The **author
+      overrode the gate directly on 2026-07-21**, selecting **v2.0** and
+      supplying the pre-reserved DOI. See the successor handoff
+      `2026-07-21-paper02-v2.0-published` for the full deviation record.
+      Commit `f90447e`, tag `v2.0`, GitHub Release cut, Zenodo new version
+      published at **10.5281/zenodo.21477781**.
+- [x] Both: preserve prior PDFs; add the metadata status notice to every old Zenodo
       version; link records both ways.
-- [ ] Back to PM when versions are cut (DOIs) so the dcl-website papers pages +
+      **DONE 2026-07-21 (author, via Zenodo UI)** — author confirmed the new
+      version is published and prior-version metadata carries the notice.
+      Not independently verifiable from this session (no Zenodo API access);
+      recorded on the author's statement.
+- [x] Back to PM when versions are cut (DOIs) so the dcl-website papers pages +
       claim map cite the correct records.
+      **DONE 2026-07-21** — filed as `2026-07-21-paper02-v2.0-published`.
+      Paper I v2.0 = 10.5281/zenodo.21464971; Paper II v2.0 =
+      10.5281/zenodo.21477781.
