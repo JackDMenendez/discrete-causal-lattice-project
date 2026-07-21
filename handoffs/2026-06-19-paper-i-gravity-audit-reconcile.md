@@ -71,8 +71,12 @@ Done in dcl commit `6d0dec5` on `main` (see `git log -- paper/sections/audit_tab
   wording confirmed; **no site edit made or needed.**
 
 **Timing caveat:** consumed *after* the Paper I v2.0 Zenodo deposit
-(10.5281/zenodo.21460564, 2026-07-20). The published v2.0 PDF does **not**
+(originally 10.5281/zenodo.21460564, 2026-07-20 — that record was later
+DELETED and re-deposited as **10.5281/zenodo.21464971**). The *first* v2.0
+PDF did **not**
 carry these two changes — they land on `main` for the next version. This
 handoff was open since 2026-06-19 and was missed at the start of the v2.0
-release session; the audit-table row shipped in v2.0 still says "Einstein
-field equations".
+release session. **Recovered by luck:** the v2.0 deposit was redone under a
+new DOI after this fix landed, so the *live* v2.0 PDF (21464971) DOES carry
+the corrected "Einstein limit conjectured" wording. Only the deleted deposit
+shipped the overselling target column.
