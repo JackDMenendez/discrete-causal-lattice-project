@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: ["eaef5cd"]
 pr: none
-status: open
+status: consumed
 state: ready
 semver: patch (v0.2.1)
 flags:
@@ -15,8 +15,9 @@ flags:
 decisions:
   - "Removed `sagemath` from the `requires` call in vscode-ps.cmd, line 10. The ps profile now loads: global, win, git-cli, miktex, vscode, msys2-tools."
   - "Single-line edit; committed and pushed."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+consumed_note: "eaef5cd already on main. Remaining actions (audit vscode-cmd.cmd for the same stray sagemath requires; include in next release) folded into the wcde go-ahead handoff 2026-07-29-wcde-dev-soak-confirmed-commit-and-rollout (§D)."
 ---
 
 ## Summary

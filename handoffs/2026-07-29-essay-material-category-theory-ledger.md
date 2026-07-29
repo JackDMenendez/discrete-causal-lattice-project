@@ -6,8 +6,10 @@ repo: JackDMenendez/dcl-mathematics
 branch: main
 commits: [883f0ea, c4beff8]
 pr: none
-status: open
-state: complete                     # material delivered; drafting + editorial judgement are the consumer's
+status: consumed
+state: complete                     # material delivered; PM drafted the essay (unpublished); publish is the author's call
+board_issue: "#30 (internal 029, 'Website Essay') in discrete-causal-lattice-project, added to project 6"
+draft_path: "dcl-website/essays/posts/2026-07-29-the-framework-told-us-our-test-was-wrong/index.qmd"
 semver: n/a (essay material, no software change)
 flags:
   - "EMBARGO — CONFINEMENT CONJECTURE. `successor_geometries_simplex_face_lattice.md` §5 (coloured = single triad = anisotropic = confined) is marked speculative and explicitly NOT to be stated publicly before its group-theoretic check. It is the most quotable idea in the whole thread and therefore the most likely to leak into an essay. DO NOT PUBLISH IT."
@@ -21,8 +23,9 @@ decisions:
   - "Recommended spine: the taxicab correction, because the author supplied it and it overturned a criterion this session had written incorrectly. Method working against its authors is the same virtue as publishing a negative result."
   - "Recommended substance: an HONEST ledger of where category theory paid and where it did not. The split is the interesting part; an inflated account would be both false and less credible."
   - "Recommended exclusions: everything in the flags above. What remains is publishable with no unverified claim."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+consumed_note: "Essay DRAFTED (unpublished) with the author's chosen personal-hook framing; renders clean; claim-map reconciled; all four embargoed items verified absent. Board issue #30 opened. Still owed by the author: the publish decision, and a hero-image decision (none yet; figures/philosophical.drawio gated). See #30 for the full checklist."
 ---
 
 ## Summary
@@ -140,19 +143,22 @@ that escapes into an essay. It is unchecked. Do not use it.
 
 ## → Consumer actions
 
-- [ ] **Draft** the essay from §1-§4 above, in the voice of
-      `news/posts/2026-07-21-optical-axis-tested-single-domain-no-go.qmd`.
-      Recommended working title: *"The framework told us our test was wrong."*
-- [ ] **Exclude** every flagged item: the confinement conjecture, the
-      dimensional-selection claim, architecture A2 as settled, and the
-      (d+1):1 theorem as a result. Verify against the flags before publishing.
-- [ ] **Reconcile** the draft against `papers/claim-map.qmd` so the essay
-      creates no claim outrunning the audit tables.
-- [ ] **Board:** open an issue in `discrete-causal-lattice-project` (project 6)
-      for the essay and link this handoff; record the issue number back here.
-- [ ] **Gate:** do NOT commission artwork from `figures/philosophical.drawio`
-      until its parity colouring, bonds and caption are fixed (see flags) — the
-      diagram currently contradicts strict bipartiteness on its own face.
-- [ ] **Cross-check** with the still-open `2026-07-30-dcl-data-shared-repo-proposal`
-      decision: if the audit-authority conflict (R3) is ruled on, the essay's
-      framing of "what counts as evidence" may want to reflect it.
+- [x] **Draft** the essay — DONE (PM, 2026-07-29). Title *"The Framework Told Us
+      Our Test Was Wrong"*, personal-hook framing per the author's decision, in
+      the calibration-essay / no-go-post voice. At
+      `dcl-website/essays/posts/2026-07-29-the-framework-told-us-our-test-was-wrong/index.qmd`.
+- [x] **Exclude** every flagged item — DONE + verified absent: confinement
+      conjecture, δp_min dimensional selection, architecture A2 as settled, the
+      (d+1):1 theorem as a result. Essay stays at the epistemology level: no
+      geometry named, no T-numbers, no dimension counts.
+- [x] **Reconcile** against `papers/claim-map.qmd` — DONE. All four blocks are
+      methodological; the essay creates no claim outrunning the audit tables.
+- [x] **Board:** DONE — issue **#30** (internal 029, "Website Essay") opened in
+      `discrete-causal-lattice-project`, added to project 6, links this handoff.
+- [ ] **Gate (STILL LIVE):** no artwork from `figures/philosophical.drawio`
+      until its parity colouring, bonds and caption are fixed. Essay currently
+      ships imageless (fine — most site essays have no image).
+- [ ] **Author decisions owed:** (a) publish (push → publish.yml → live);
+      (b) hero image or none.
+- [ ] **Cross-check** with `2026-07-30-dcl-data-shared-repo-proposal` R3
+      audit-authority ruling if/when it resolves.

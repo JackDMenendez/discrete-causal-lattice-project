@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: []                         # NONE — all work is uncommitted working-tree
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: unreleased (uncommitted working-tree; no bump until DEV soak → commit)
 flags:
@@ -19,8 +19,9 @@ decisions:
   - "user-data-dir is repo-local (<repo>\\.vsisolation\\<profile>\\data, gitignored) when a target is given, else %USERPROFILE%; extensions-dir is ALWAYS %USERPROFILE%\\.vsisolation\\<profile>\\ext (shared per profile, ~47MB total, user-approved as acceptable)."
   - "Profile key = explicit WCDE_VSCODE_PROFILE per launcher; MSYSTEM-derived default for subsystem flavors, overridden for haskell/agda; vscode-cmd shares the ps profile."
   - "common.txt (installed into every profile) = vscodevim.vim, eamodio.gitlens, anthropic.claude-code, editorconfig.editorconfig."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+consumed_note: "User confirmed the DEV soak. Gate lifted and all consumer actions consolidated into the wcde go-ahead handoff 2026-07-29-wcde-dev-soak-confirmed-commit-and-rollout (§A–F)."
 ---
 
 ## Summary

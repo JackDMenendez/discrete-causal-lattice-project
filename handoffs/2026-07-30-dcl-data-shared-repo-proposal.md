@@ -6,8 +6,8 @@ repo: JackDMenendez/dcl-mathematics
 branch: main
 commits: [883f0ea, c4beff8]
 pr: none
-status: open
-state: blocked                      # cannot be created from a focused session; awaits PM/board decision
+status: consumed
+state: pm-decided                   # APPROVED as a board item (#29 / internal 028); repo CREATION still gated on the bit-reproducibility verify below
 semver: n/a (proposal + research notes, no software change)
 flags:
   - "UNVERIFIED PREMISE: the whole 'store recipes + hashes, not bulk' design assumes dcl-core is BIT-REPRODUCIBLE from (version, config, seed). Nobody has checked. Any nondeterminism (RNG state, thread scheduling, dict/set iteration order, parallel reduction order) breaks the hash contract and forces bulk storage + LFS instead. VERIFY BEFORE ADOPTING."
@@ -20,8 +20,9 @@ decisions:
   - "Recommend pip-installable distribution with tagged releases, matching the existing dcl-core-into-.venv-win pattern; papers cite a pinned `dcl-data vX.Y` the way deposits cite a DOI."
   - "Recommend a per-artifact God-eye flag in the schema (see flags)."
   - "Deliberately did NOT create the repo or a board issue from this session — standing up a repo touches wcde setup, the board, and every downstream consumer, so it is routed as a proposal."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+pm_decision: "APPROVED to stand up dcl-data. Board issue #29 (internal 028, 'Infrastructure') opened in discrete-causal-lattice-project and added to project 6, linking this handoff. Repo CREATION is HARD-GATED on a dcl-core bit-reproducibility verification (see checklist) — if runs are not bit-reproducible from (version, config, seed), re-scope to bulk+LFS before creating anything. R3 audit-authority conflict left UNRESOLVED for deliberate ruling (recorded on the issue), R2 God-eye flag noted as a program-wide convention. δp_min finding routed to dcl-delta-p-min (2026-07-29-dpmin-geometric-fitted-branch-input); referee M6 routed to paper-04 (2026-07-29-paper04-referee-M6-answered-bell-note)."
 ---
 
 ## Summary
@@ -145,10 +146,10 @@ cross-repo rather than dcl-data-specific:
 
 ## → Consumer actions
 
-- [ ] **Decide:** approve or reject standing up `dcl-data`. If approved, open a
-      new issue in `discrete-causal-lattice-project` (project 6) titled
-      "Stand up dcl-data shared data repo" and link this handoff; record the
-      issue number back here.
+- [x] **Decide:** APPROVED (PM, 2026-07-29). Opened board issue **#29**
+      (internal 028, "028 Infrastructure Stand up dcl-data shared data repo …")
+      in `discrete-causal-lattice-project`, added to project 6, links this
+      handoff. Repo creation still gated on the bit-reproducibility verify below.
 - [ ] **Verify before creating:** confirm `dcl-core` runs are bit-reproducible
       from (version, config, seed) — check RNG seeding, thread/parallel
       reduction order, and any dict/set iteration dependence. If NOT
@@ -162,12 +163,12 @@ cross-repo rather than dcl-data-specific:
 - [ ] **Gate:** do NOT begin instrumentation / discovery-view coding in
       `dcl-core` until the data contract (R1, R2) is decided — otherwise
       outputs land ad hoc and relocating them is expensive.
-- [ ] **Route the δp_min finding** to `dcl-delta-p-min` as input to the open
-      derive-or-fit gate: a geometric quarter is the *fitted* branch.
-- [ ] **Route referee major M6** to the Paper IV session
-      (`dcl-paper-04-optical-axis-birefringence`) — it is answered in
-      `dcl-mathematics/notes/bell_chsh_separability_on_lattice.md` §10.5-10.6
-      and is currently sitting in that paper's open v1.0 referee queue.
+- [x] **Route the δp_min finding** to `dcl-delta-p-min` — DONE (PM, 2026-07-29):
+      handoff `2026-07-29-dpmin-geometric-fitted-branch-input.md` (equal-weight
+      facet selection ⇒ δp_min = 1/(d+1), degenerate in d ⇒ the *fitted* branch).
+- [x] **Route referee major M6** to the Paper IV session — DONE (PM, 2026-07-29):
+      handoff `2026-07-29-paper04-referee-M6-answered-bell-note.md` (answered in
+      Bell note §10.5-10.6, floor-as-admissibility).
 - [ ] **Note for later:** `dcl-mathematics/notes/dcl_core_handoff_queue.md` is a
       staging list for a future dcl-core handoff. It is NOT a handoff and must
       not be actioned as one; the author will call for it when coding starts.

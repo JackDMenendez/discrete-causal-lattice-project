@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: []                         # findings only; wcde tree still uncommitted (gated)
 pr: none
-status: open
+status: consumed
 state: blocked                      # gated on user DEV-soak sign-off (memory wcde-dev-soak-before-release)
 semver: n/a (wcde findings; the wcde bump is decided at its commit, per 2026-07-05 handoff)
 flags:
@@ -16,8 +16,9 @@ flags:
   - "CuPy present but CUDA path not detected in this session (`UserWarning: CUDA path could not be detected`) — non-fatal for CPU work; flagged only so it is not mistaken for a regression."
 decisions:
   - "None taken by this session on the wcde side — the wcde release stays gated on the user's DEV-soak sign-off. These are findings to fold into that decision."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+consumed_note: "User confirmed the DEV soak. python-flavor drift + venv-provisioning decision folded into the wcde go-ahead handoff 2026-07-29-wcde-dev-soak-confirmed-commit-and-rollout (§A python flavor, §C venv policy, §F venv note)."
 ---
 
 ## Summary

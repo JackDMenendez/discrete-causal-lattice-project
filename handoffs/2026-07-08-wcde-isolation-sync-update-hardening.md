@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: []                         # uncommitted; wcde tree still gated (see 2026-07-06 handoff)
 pr: none
-status: open
+status: consumed
 state: blocked                      # gated on user DEV-soak sign-off (memory wcde-dev-soak-before-release)
 semver: n/a (wcde; bump decided at the soak-closing commit, per 2026-07-05 handoff)
 flags:
@@ -20,8 +20,9 @@ decisions:
   - "Placed `--sync off` at the single args-assembly line in vscode-isolation.cmd (one edit covers every launcher: ps/web/ucrt64/mingw64/haskell/agda/sage/tex/python) rather than editing each vscode-*.cmd."
   - "Root-caused the stuck-updater ambush to isolated `--user-data-dir`s NOT inheriting global settings (so they defaulted to `update.mode: default` and auto-downloaded). Fixed at source by seeding the data dir, not just by killing the process."
   - "Seed-if-absent (never merge/clobber) over a JSON-merge into the data-dir settings."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-07-29
+consumed_note: "User confirmed the DEV soak. --sync off, seed_user_settings, setup-vscode typo fix, exp-tex flavor, requires trims, user-settings template all folded into the wcde go-ahead handoff 2026-07-29-wcde-dev-soak-confirmed-commit-and-rollout (§A, §C, §E, §F)."
 ---
 
 ## Summary
