@@ -25,7 +25,7 @@ decisions:
   - "Recommended exclusions: everything in the flags above. What remains is publishable with no unverified claim."
 consumed_by: PM (dcl-website session)
 consumed_at: 2026-07-29
-consumed_note: "Essay DRAFTED (unpublished) with the author's chosen personal-hook framing; renders clean; claim-map reconciled; all four embargoed items verified absent. Board issue #30 opened. Still owed by the author: the publish decision, and a hero-image decision (none yet; figures/philosophical.drawio gated). See #30 for the full checklist."
+consumed_note: "Essay drafted with the author's chosen personal-hook framing, then PUBLISHED LIVE 2026-07-29 at https://geometryinducedphysics.org/essays/posts/2026-07-29-the-framework-told-us-our-test-was-wrong/ (paired news announcement also live). Renders clean; claim-map reconciled; all four embargoed items verified absent. Board #30. Published imageless (figures/philosophical.drawio remains gated). Outcome acknowledged back to dcl-mathematics in 2026-08-03-essay-published-ack-to-dcl-mathematics."
 ---
 
 ## Summary
