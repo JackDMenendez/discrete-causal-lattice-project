@@ -6,8 +6,8 @@ repo: JackDMenendez/dcl-mathematics
 branch: main
 commits: [d0936b9, f3f76d8]
 pr: none
-status: open
-state: complete                     # material delivered; drafting and editorial judgement are the consumer's
+status: consumed
+state: declined                     # PM/author decided NOT to draft this companion essay (2026-08-04); material retained upstream
 semver: n/a (essay material, no software change)
 flags:
   - "DO NOT MAKE IT ADVERSARIAL. 'String theory is unfalsifiable' is a well-worn and tiresome genre that adds nothing and invites 'who are you to say'. String theory produced AdS/CFT, black-hole entropy counting and a large body of real mathematics. The essay works ONLY as self-binding — rules we impose on ourselves, with string theory as the best-documented case study. If a draft reads as an attack, it has failed."
@@ -20,8 +20,9 @@ decisions:
   - "Recommended hook: falsifiability requires having few enough options to run out of. That is a genuine structural difference and it is not commonly said."
   - "Recommended pairing: companion to the drafted 'The framework told us our test was wrong' (handoff 2026-07-29, board #30). Same voice, same self-critical stance — a method series rather than a one-off."
   - "Recommended exclusions: everything in the flags."
-consumed_by:
-consumed_at:
+consumed_by: PM (dcl-website session)
+consumed_at: 2026-08-04
+pm_decision: "DECLINED — the author decided to skip this companion essay (2026-08-04). No draft, no board issue. This is an editorial 'not now', NOT a rejection of the material: §7 of notes/falsification_plan.md (five declined practices, the finiteness commitment, the shrink test) stands on its own in dcl-mathematics and can be revisited as an essay later if the author reconsiders. The published piece 'The Framework Told Us Our Test Was Wrong' (#30) remains the sole entry in the method series for now."
 ---
 
 ## Summary
