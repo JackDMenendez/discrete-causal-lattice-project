@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: []
 pr: none
-status: open
+status: consumed
 state: ready                        # gate lifted — user confirmed the DEV soak; wcde is cleared to commit + roll to PROD
 semver: TBD by wcde at the soak-closing commit (>= the sagemath v0.2.1 patch already on main)
 flags:
@@ -15,8 +15,8 @@ flags:
   - "sagemath-path-leak (eaef5cd, patch v0.2.1) is ALREADY committed+pushed on main and is separate from the isolation feature — but its 'include in next release' + 'audit vscode-cmd.cmd' actions belong to this same release cut."
 decisions:
   - "PM lifts the soak gate on the user's sign-off; PM does NOT commit the wcde tree (win-cross-dev-env is outside the dcl-website/PM direct-edit scope — reached via handoff). wcde owns the commit, the semver bump, and the PROD rollout."
-consumed_by:
-consumed_at:
+consumed_by: wcde (focused) — RECONCILED against git (handoff premise was stale). The isolation feature was NOT still uncommitted; it had already been committed and RELEASED as v0.2.0 (`211f389`, isolation hardening) and v0.3.0 (`4abff35`), and PROD `c:\prod\wcde` was already at v0.3.0 — so actions A/B/D/E-isolation were done by prior sessions. What remained (the Lean/Mathlib flavor + a python-activation cleanup) shipped as **v0.3.1** (`3bf5bd7`) and was rolled to PROD on 2026-08-04. The action-E follow-up (source-of-truth handoff superseding 2026-07-03-vscode-ps-canonical-invocation) is written: [[2026-08-04-wcde-vscode-isolation-canonical-invocation]]; release reported in [[2026-08-04-wcde-v0.3.1-released]]. Action-F stuck-updater remedy recorded to wcde memory. Action-C design calls remain open — carried forward in the release handoff's Remaining.
+consumed_at: 2026-08-04
 ---
 
 ## Summary
