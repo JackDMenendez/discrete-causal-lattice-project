@@ -6,7 +6,7 @@ repo: win-cross-dev-env (wcde)
 branch: main
 commits: []                         # none -- diagnosis only, no code written
 pr: none
-status: open
+status: consumed
 state: in-progress
 semver: 0.3.1 -> 0.3.2 (PATCH, unreleased)   # proposed; restores intended behaviour
 flags:
@@ -23,8 +23,8 @@ decisions:
     The missing artefact is the manifest, not the launcher.
   - PATCH rather than MINOR: this restores intended behaviour rather than
     adding a flavour.
-consumed_by:
-consumed_at:
+consumed_by: wcde (focused)
+consumed_at: 2026-09-04
 ---
 
 ## Summary
@@ -179,3 +179,7 @@ close the preview complaint on the strength of this handoff.
 - [ ] Separately: the LaTeX preview symptom in `dcl-mathematics` remains
       unresolved and is **not** covered by this handoff. Route it back to the
       dcl-mathematics session rather than closing it here.
+
+## Consumed note (2026-09-04, wcde)
+
+The wcde-tagged consumer actions are done in 98c111b, released as v0.4.0 (folded in rather than tagged v0.3.2). lean.txt written with all 14 profile entries verbatim per the owner's call -- the three suspected strays were RETAINED deliberately. Verified by dry-run provision: 18 extensions (4 common + 14 lean), no 'no manifest' warning, and the .wcde-provisioned marker restored untouched per the reprovision-destroys-current-set gate. NOT done and routed onward: the LaTeX preview/IntelliSense symptom is NOT covered here and goes back to dcl-mathematics; the launcher/manifest pairing audit is recorded in vsprofiles/README.md but nothing enforces it.

@@ -6,7 +6,7 @@ repo: win-cross-dev-env
 branch: main
 commits: []                         # request; no wcde commits — the wcde session makes them (still soak-gated)
 pr: none
-status: open
+status: consumed
 state: blocked                      # folds into the wcde isolation DEV-soak gate (2026-07-05 / 2026-07-06)
 semver: n/a (wcde manifest addition; bump decided at the wcde commit per 2026-07-05)
 flags:
@@ -16,8 +16,8 @@ flags:
 decisions:
   - "Requested via handoff, not a direct edit: this session (dcl-website/PM) owns only dcl-project + dcl-website; wcde is another session's province."
   - "code-spell-checker is REQUIRED (config already present); redhat.vscode-yaml is RECOMMENDED-OPTIONAL only (there are 3 .yml incl _quarto.yml + qmd front matter, but no schema config shipped) — the wcde session's call whether to include it."
-consumed_by:
-consumed_at:
+consumed_by: wcde (focused)
+consumed_at: 2026-09-04
 ---
 
 ## Summary
@@ -66,3 +66,7 @@ separate PROD roll; and the id is unverified because `code` is absent from PATH.
       2026-07-06); do NOT commit the wcde tree or roll to PROD before the user's
       soak sign-off. Fold it into the follow-up handoff that supersedes
       `2026-07-03-vscode-ps-canonical-invocation`.
+
+## Consumed note (2026-09-04, wcde)
+
+Shipped in af1a76e and released in v0.4.0. NOTE: the handoff's premise had gone stale -- streetsidesoftware.code-spell-checker was already present in the web profile ext dir, installed via the UI, so the manifest entry buys reproducibility for a fresh provision rather than repairing a live breakage. redhat.vscode-yaml declined (no schema config shipped). Extension id VERIFIED (code-spell-checker-4.5.6 installed), closing this handoff's flag 3.

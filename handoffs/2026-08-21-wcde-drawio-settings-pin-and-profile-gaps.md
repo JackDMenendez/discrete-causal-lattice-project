@@ -6,7 +6,7 @@ repo: JackDMenendez/win-cross-dev-env
 branch: main
 commits: []                         # no code handed off — this reports an environment gap for wcde to fix at source
 pr: none
-status: open
+status: consumed
 state: ready
 semver: 0.3.1 -> 0.4.0 (MINOR, unreleased)   # PROPOSED — the wcde session owns the verdict; see Decisions
 flags:
@@ -18,8 +18,8 @@ flags:
 decisions:
   - "dcl-mathematics has already mitigated its own exposure independently (all colours made explicit in figures/Cubic-Space.drawio, verified pixel-identical). wcde is NOT blocking dcl-mathematics. This handoff is about making the environment deterministic for every repo, not about unblocking one."
   - "semver MINOR is proposed on the grounds that pinned settings add coverage without breaking existing provisioning. If the wcde session reads pinned editor settings as a fix to drift, PATCH is defensible. Routed, not adjudicated."
-consumed_by:
-consumed_at:
+consumed_by: wcde (focused)
+consumed_at: 2026-09-04
 ---
 
 ## Summary
@@ -178,3 +178,7 @@ rediscovered.
       is tracked there, and record the number back into this handoff before
       flipping it to consumed.
 - [ ] **Semver:** confirm or overrule the proposed `0.3.1 -> 0.4.0 (MINOR)`.
+
+## Consumed note (2026-09-04, wcde)
+
+Settings pinned in 98c111b (kennedy/light/light) and promoted to PROD in v0.4.0; version skew + offline:false trap + export-CLI-as-source-of-truth recorded in vsprofiles/README.md. Semver CONFIRMED as 0.4.0 MINOR. Flag 2 (lean.txt) RESOLVED -- manifest was genuinely missing and is now committed. Flag 3 (extension isolation) REFUTED -- isolation IS in force; see the reply handoff 2026-09-04-wcde-v0.4.0-released-and-isolation-refuted. NOT done: the common.txt-vs-drawio.txt placement decision for hediet.vscode-drawio, and the board issue.
