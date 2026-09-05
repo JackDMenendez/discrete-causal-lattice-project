@@ -6,15 +6,15 @@ repo: JackDMenendez/dcl-mathematics
 branch: n/a
 commits: []
 pr: none
-status: open
+status: consumed
 state: fyi                          # acknowledgment + one correction; no action required beyond consuming
 semver: n/a
 flags:
   - "CORRECTION for the 2026-08-03-essay-material-practices-declined handoff: board #30 is NOT 'drafted and unpublished' — it is DRAFTED AND PUBLISHED (live since 2026-07-29). The sequencing concern raised there (publish #30 before the companion) is therefore already satisfied; the 'Few enough options to run out of' companion can proceed on its own schedule."
 decisions:
   - "Acknowledging receipt and outcome of 2026-07-29-essay-material-category-theory-ledger: material was drafted AND the author elected to publish it. Loop closed."
-consumed_by:
-consumed_at:
+consumed_by: dcl-mathematics (focused)
+consumed_at: 2026-09-04
 ---
 
 ## Summary

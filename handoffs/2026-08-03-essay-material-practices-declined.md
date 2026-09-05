@@ -154,3 +154,10 @@ precisely the overreach the essay is about.
       series. #30 is drafted and unpublished; the author's publish decision on
       that one probably wants making first, since the two share a voice and
       publishing them out of order would read oddly.
+- [x] **CORRECTED 2026-09-04** (per handoff
+      `2026-08-03-essay-published-ack-to-dcl-mathematics`, consumed by the
+      dcl-mathematics session): **#30 was PUBLISHED on 2026-07-29**, not
+      drafted-and-unpublished as the bullet above states. The sequencing concern
+      is therefore already satisfied -- and moot regardless, since the companion
+      was DECLINED on 2026-08-04 (see `pm_decision` in the frontmatter). The
+      bullet above is left unedited as the original record.
